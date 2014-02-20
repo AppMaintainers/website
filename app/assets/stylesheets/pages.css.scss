@@ -1,3 +1,149 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+font-size: 100px;
+background-color: #e4e6ea;
+margin: 0 auto;
+font-family: Helvetica;
+}
+
+header {
+background: asset-url('Koala_opacity.jpg', image) no-repeat center;
+background-size: cover;
+padding-top:350px; 
+padding-bottom:520px;
+margin-bottom: 60px;
+}
+
+h1 {
+color: black;
+font-size: 88px;
+font-weight: bold;
+text-align: center;
+}
+
+h4 {
+color: #969799;
+font-size: 14px;
+padding-top:15px;
+}
+
+h5 {
+color: #969799;
+
+text-align: center;
+}
+
+.projects {
+text-align: center;
+margin-top: 30px;
+}
+
+.projects h5 {
+
+padding-bottom:50px;
+border-bottom: 2px solid #26343e;
+}
+
+.projects p {
+color: black;
+font-size: 40px;
+padding-bottom:35px;
+border-bottom: 2px solid #26343e;
+}
+
+nav {
+text-align: center;
+font-size: 40px;
+line-height: 160%;
+
+}
+
+nav p:nth-child(1) {
+border-right: 2px solid #969799;
+}
+
+span {
+font-size: 70px;
+}
+
+a, a:hover {
+color: black;
+font-size: 40px;
+text-decoration: none;
+}
+
+.projects a {
+color: #969799;
+font-size: 15px;
+border-bottom: 3px solid #969799;
+}
+
+.our_team h1 {
+margin-top: 510px;
+}
+
+.our_team li {
+background-size: cover;
+color: black;
+font-size: 32px;
+padding-top:200px; 
+padding-bottom:10px;
+margin-bottom: 20px;
+text-align: center;
+line-height: 100%;
+list-style: none;
+}
+
+.our_team li:nth-child(1) {
+background: asset-url('Penguins.jpg', image) no-repeat center;
+}
+
+.our_team li:nth-child(2) {
+background: asset-url('Jellyfish.jpg', image) no-repeat center;
+}
+
+.our_team li:nth-child(3) {
+background: asset-url('Hydrangeas.jpg', image) no-repeat center;
+}
+
+.our_team li:nth-child(4) {
+background: asset-url('Desert.jpg', image) no-repeat center;
+}
+
+b {
+font-size: 22px;
+}
+
+.toolkit {
+text-align: center;
+}
+
+.toolkit h5 {
+padding-bottom:50px;
+border-bottom: 2px solid #26343e;
+}
+
+.toolkit p {
+color: black;
+font-size: 32px;
+padding-top:5px;
+padding-bottom:20px;
+border-bottom: 2px solid #26343e;
+}
+
+.contact {
+text-align: center;
+}
+
+.contact h5:nth-child(2)  {
+padding-bottom:50px;
+}
+
+.contact p {
+color: black;
+font-size: 34px;
+padding-bottom:50px;
+}

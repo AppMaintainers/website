@@ -43,3 +43,10 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :development do
+	gem 'sqlite3'
+end
+
+gem 'rails_admin'
+gem 'devise'
