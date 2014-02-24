@@ -48,5 +48,6 @@ group :development do
 	gem 'sqlite3'
 end
 
+gem 'rails_12factor', group: :production
 gem 'rails_admin'
 gem 'devise'
