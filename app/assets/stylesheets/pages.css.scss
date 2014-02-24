@@ -12,7 +12,7 @@ font-family: Helvetica;
 header {
 background: asset-url('Koala_opacity.jpg', image) no-repeat center;
 background-size: cover;
-padding-top:350px; 
+padding-top:300px; 
 padding-bottom:520px;
 margin-bottom: 60px;
 }
@@ -26,13 +26,13 @@ text-align: center;
 
 h4 {
 color: #969799;
-font-size: 14px;
+font-size: 30px;
 padding-top:15px;
 }
 
 h5 {
 color: #969799;
-
+font-size: 40px;
 text-align: center;
 }
 
@@ -49,7 +49,7 @@ border-bottom: 2px solid #26343e;
 
 .projects p {
 color: black;
-font-size: 40px;
+font-size: 60px;
 padding-bottom:35px;
 border-bottom: 2px solid #26343e;
 }
@@ -71,13 +71,13 @@ font-size: 70px;
 
 a, a:hover {
 color: black;
-font-size: 40px;
+font-size: 50px;
 text-decoration: none;
 }
 
 .projects a {
 color: #969799;
-font-size: 15px;
+font-size: 40px;
 border-bottom: 3px solid #969799;
 }
 
@@ -89,28 +89,21 @@ margin-top: 510px;
 background-size: cover;
 color: black;
 font-size: 32px;
-padding-top:200px; 
-padding-bottom:10px;
-margin-bottom: 20px;
+padding-top:20px; 
+
 text-align: center;
 line-height: 100%;
 list-style: none;
 }
 
 .our_team li:nth-child(1) {
-background: asset-url('Penguins.jpg', image) no-repeat center;
+background: asset-url('bence.jpg', image) no-repeat center;
+padding-top:500px;
 }
 
 .our_team li:nth-child(2) {
-background: asset-url('Jellyfish.jpg', image) no-repeat center;
-}
-
-.our_team li:nth-child(3) {
-background: asset-url('Hydrangeas.jpg', image) no-repeat center;
-}
-
-.our_team li:nth-child(4) {
-background: asset-url('Desert.jpg', image) no-repeat center;
+background: asset-url('juhat.jpg', image) no-repeat center;
+padding-top:500px;
 }
 
 b {
@@ -121,6 +114,10 @@ font-size: 22px;
 text-align: center;
 }
 
+.toolkit h1 {
+margin-top: 700px;
+}
+
 .toolkit h5 {
 padding-bottom:50px;
 border-bottom: 2px solid #26343e;
@@ -128,7 +125,7 @@ border-bottom: 2px solid #26343e;
 
 .toolkit p {
 color: black;
-font-size: 32px;
+font-size: 50px;
 padding-top:5px;
 padding-bottom:20px;
 border-bottom: 2px solid #26343e;
@@ -138,12 +135,20 @@ border-bottom: 2px solid #26343e;
 text-align: center;
 }
 
+.contact h1 {
+margin-top: 700px;
+}
+
 .contact h5:nth-child(2)  {
 padding-bottom:50px;
 }
 
 .contact p {
 color: black;
-font-size: 34px;
+font-size: 50px;
 padding-bottom:50px;
+}
+
+.map h1 {
+background: asset-url('map.jpg', image) no-repeat center;
 }
