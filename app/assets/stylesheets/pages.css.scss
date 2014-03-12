@@ -3,152 +3,160 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 html {
-font-size: 100px;
-background-color: #e4e6ea;
-margin: 0 auto;
-font-family: Helvetica;
+  font-size: 100px;
+  background-color: #e4e6ea;
+  margin: 0 auto;
+  font-family: Helvetica;
 }
 
 header {
-background: asset-url('Koala_opacity.jpg', image) no-repeat center;
-background-size: cover;
-padding-top:300px; 
-padding-bottom:520px;
-margin-bottom: 60px;
+  background: asset-url('Koala_opacity.jpg', image) no-repeat center;
+  background-size: cover;
+  padding-top:300px; 
+  margin-bottom: 60px; 
+  h1 {
+    color: black;
+    font-size: 88px;
+    font-weight: bold;
+    text-align: center;
+  }
+  a, a:hover {
+    color: black;
+    font-size: 50px;
+    text-decoration: none;
+  }
+  div {
+    padding-top:500px; 
+    text-align: center;
+    font-size: 40px;
+    line-height: 160%;
+    p:nth-child(1) {
+      border-right: 2px solid #969799;
+    }
+    span {
+      font-size: 70px;
+    }
+  }
 }
 
-h1 {
-color: black;
-font-size: 88px;
-font-weight: bold;
-text-align: center;
+h2 {
+  color: black;
+  font-size: 80px;
+  padding-top:15px;
 }
 
-h4 {
-color: #969799;
-font-size: 30px;
-padding-top:15px;
-}
-
-h5 {
-color: #969799;
-font-size: 40px;
-text-align: center;
+h2:after {
+  padding: 0 20px;
+  content: " ";
 }
 
 .projects {
-text-align: center;
-margin-top: 30px;
+  text-align: center;
+  margin-top: 30px;
+  p {
+    color: black;
+    font-size: 50px;
+    padding-bottom:35px;
+    border-bottom: 2px solid #26343e;
+  }
+  p:nth-child(2) {
+    color: #818185;
+    font-size: 40px;
+  }
+  h4 {
+    color: #969799;
+    font-size: 30px;
+  }
+  a, a:hover {
+    color: #818185;
+    font-size: 30px;
+    border-bottom: 3px solid #969799;
+    text-decoration: none;
+  }
 }
 
-.projects h5 {
+.our-team {
+  text-align: center;
+  h2 {
+    margin-top: 300px;
+  }
 
-padding-bottom:50px;
-border-bottom: 2px solid #26343e;
-}
-
-.projects p {
-color: black;
-font-size: 60px;
-padding-bottom:35px;
-border-bottom: 2px solid #26343e;
-}
-
-nav {
-text-align: center;
-font-size: 40px;
-line-height: 160%;
-
-}
-
-nav p:nth-child(1) {
-border-right: 2px solid #969799;
-}
-
-span {
-font-size: 70px;
-}
-
-a, a:hover {
-color: black;
-font-size: 50px;
-text-decoration: none;
-}
-
-.projects a {
-color: #969799;
-font-size: 40px;
-border-bottom: 3px solid #969799;
-}
-
-.our_team h1 {
-margin-top: 510px;
-}
-
-.our_team li {
-background-size: cover;
-color: black;
-font-size: 32px;
-padding-top:20px; 
-
-text-align: center;
-line-height: 100%;
-list-style: none;
-}
-
-.our_team li:nth-child(1) {
-background: asset-url('bence.jpg', image) no-repeat center;
-padding-top:500px;
-}
-
-.our_team li:nth-child(2) {
-background: asset-url('juhat.jpg', image) no-repeat center;
-padding-top:500px;
-}
-
-b {
-font-size: 22px;
+  p {
+    color: #818185;
+    font-size: 40px;
+  }
+  li {
+    background-size: cover;
+    color: black;
+    font-size: 40px;
+    line-height: 100%;
+    list-style: none;
+    padding-top:500px;
+    p {
+      padding-top:300px;
+      text-align:center;
+      b {
+        font-size: 25px;
+      }
+    }
+  }
+  li:nth-child(1) {
+    background: asset-url('bence.jpg', image) no-repeat center;
+  }
+  li:nth-child(2) {
+    background: asset-url('juhat.jpg', image) no-repeat center;
+  }
 }
 
 .toolkit {
-text-align: center;
-}
-
-.toolkit h1 {
-margin-top: 700px;
-}
-
-.toolkit h5 {
-padding-bottom:50px;
-border-bottom: 2px solid #26343e;
-}
-
-.toolkit p {
-color: black;
-font-size: 50px;
-padding-top:5px;
-padding-bottom:20px;
-border-bottom: 2px solid #26343e;
+  text-align: center;
+  h2 {
+    margin-top: 300px;
+  }
+  p {
+    color: #818185;
+    font-size: 40px;
+    padding-bottom:50px;
+    border-bottom: 2px solid #26343e;
+  }
+  li {
+    color: black;
+    font-size: 50px;
+    list-style: none;
+    padding-top:5px;
+    padding-bottom:20px;
+    border-bottom: 2px solid #26343e;
+  }
 }
 
 .contact {
-text-align: center;
-}
-
-.contact h1 {
-margin-top: 700px;
-}
-
-.contact h5:nth-child(2)  {
-padding-bottom:50px;
-}
-
-.contact p {
-color: black;
-font-size: 50px;
-padding-bottom:50px;
+  text-align: center;
+  h2 {
+    margin-top: 300px;
+  }
+  p {
+    color: #818185;
+    font-size: 40px;
+    padding-bottom:40px;
+  }
+  li {
+    color: black;
+    list-style: none;
+    padding-top:5px;
+    padding-bottom:20px;
+    h5 {
+      color: #818185;
+      font-size: 40px;      
+    }
+    p {
+      color: black;
+      font-size: 50px;
+    }
+  }
 }
 
 .map h1 {
-background: asset-url('map.jpg', image) no-repeat center;
+  background: asset-url('map.jpg', image) no-repeat center;
+  background-size: cover;
+  height: 465px;
 }

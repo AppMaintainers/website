@@ -3,59 +3,109 @@
     <header class="text-center", 'col-xs-12'>
       <h1>We maintain & build Ruby on Rails apps.</h1>
       <a href="http://www.appmaintainers.com/"> &#9658; How we do it?</a>
+
+      <div>
+        <p class='col-xs-6'>We closed <br><span><strong>352</strong></span><br> tickets last month</P>
+        <p class='col-xs-6'>We wrote approx. <br><span><strong>1,200</strong></span><br> lines of code today</p>
+      </div>
     </header>
 
-    <nav>
-      <p class='col-xs-6'>We closed <br><span><strong>352</strong></span><br> tickets last month</P>
-      <p class='col-xs-6'>We wrote approx. <br><span><strong>1,200</strong></span><br> lines of code today</p>
-    </nav>
-
     <section class='projects col-xs-12'>
-      <h1>Projects</h1>
-      <h5>We are not able to share concrete informations about our projects, but we can share stories.</h5>
+      <h2>Projects</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Card name</th>
+            <th>Project</th>
+            <th>Problem</th>
+            <th>Solution</th>
+            <th>Category</th>
+            <th>Difficulty</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @cards.each do |card| %>
+            <tr>
+              <td><%= card.id %></td>
+              <td><%= card.card_name %></td>        
+              <td><%= card.project %></td>
+              <td><%= card.problem %></td>
+              <td><%= card.solution %></td>
+              <td><%= card.category %></td>
+              <td><%= card.difficulty %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <p>We are not able to share concrete informations about our projects, but we can share stories.</p>
+      
       <h4>#project_nickname</h4>
       <p>Multi lingual, responsive <br>website for Saga</p>
+      
       <h4>#dday</h4>
       <p>Deal of the Day service</p>
+      
       <h4>#macdaddy</h4>
       <p>Custom CMS</p>
-      <a href="http://www.appmaintainers.com/">More projects</a>
+      <a href="#">More projects</a>
     </section>
 
-    <section class='our_team'>
-      <h1 class='col-xs-12'>Our Team</h1>
-      <h5 class='col-xs-12'>Short introduction of our team as a whole.</h5>
+    <section class='our-team'>
+      <h2 class='col-xs-12'>Our Team</h2>
+      <p class='col-xs-12'>Short introduction of our team as a whole.</p>
+
       <ul>
-        <li class='col-xs-6'></li>
-        <li class='col-xs-6'></li>
-        <li class='col-xs-6'>Bence Erdős <br><b>CEO</b></li>
-        <li class='col-xs-6'>Attila Juhász <br><b>CTO</b></li>
+        <li class='col-xs-6'><p>Bence Erdős <br><b>CEO</b></p></li>
+        <li class='col-xs-6'><p>Attila Juhász <br><b>CTO</b></p></li>
       </ul>
     </section>
 
     <section class='toolkit col-xs-12'>
-      <h1>Toolkit</h1>
-      <h5>We use these stuff</h5>
-      <p>Frameworks</p>
-      <p>Databases</p>
-      <p>Gems</p>
-      <p>UI</p>
-      <p>Hosting solutions</p>
+      <h2>Toolkit</h1>
+      <p>We use these stuff</p>
+      
+      <ul>
+        <li>Frameworks</li>
+        <li>Databases</li>
+        <li>Gems</li>
+        <li>UI</li>
+        <li>Hosting solutions</li>
+      </ul>
     </section>
 
     <section class='contact col-xs-12'>
-      <h1>Contact</h1>
-      <h5>We would love to heat about you!</h5>
-      <h5>e-mail</h5>
-      <p>hello@appmaintainers.hu</p>
-      <h5>phone</h5>
-      <p>+36304720431</p>
-      <h5>skype</h5>
-      <p>app_maintainers</p>
-      <h5>linkdin</h5>
-      <p>linkdin.com/appmaintainers</p>
-      <h5>office</h5>
-      <p>H-1118 Budapest <br>Schweidel u. 27/b</p>
+      <h2>Contact</h2>
+      <p>We would love to heat about you!</p>
+      
+      <ul>
+        <li>
+          <h5>e-mail</h5>
+          <p>hello@appmaintainers.hu</p>
+        </li>
+        
+        <li>
+          <h5>phone</h5>
+          <p>+36304720431</p>
+        </li>
+
+        <li>
+          <h5>skype</h5>
+          <p>app_maintainers</p>
+        </li>
+
+        <li>
+          <h5>linkdin</h5>
+          <p>linkdin.com/appmaintainers</p>
+        </li>
+
+        <li>
+          <h5>office</h5>
+          <p>H-1118 Budapest <br>Schweidel u. 27/b</p>
+        </li>
+      </ul>
     </section>
 
     <section class='map'>
