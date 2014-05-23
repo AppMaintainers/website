@@ -2,76 +2,184 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html {
-  font-size: 100px;
-  background-color: #e4e6ea;
-  margin: 0 auto;
-  font-family: Helvetica;
+@font-face {
+  font-family: 'Prelo';
+  src: font-url('prelo-bold-webfont.eot');
+  src: font-url('prelo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  font-url('prelo-bold-webfont.woff') format('woff'),
+  font-url('prelo-bold-webfont.ttf') format('truetype'),
+  font-url('prelo-bold-webfont.svg#ralewaysemibold') format('svg');
+  font-weight: 200;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'Prelo';
+  src: font-url('prelo-book-webfont.eot');
+  src: font-url('prelo-book-webfont.eot?#iefix') format('embedded-opentype'),
+  font-url('prelo-book-webfont.woff') format('woff'),
+  font-url('prelo-book-webfont.ttf') format('truetype'),
+  font-url('prelo-book-webfont.svg#ralewaysemibold') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Prelo';
+  src: font-url('prelo-light-webfont.eot');
+  src: font-url('prelo-light-webfont.eot?#iefix') format('embedded-opentype'),
+  font-url('prelo-light-webfont.woff') format('woff'),
+  font-url('prelo-light-webfont.ttf') format('truetype'),
+  font-url('prelo-light-webfont.svg#ralewaysemibold') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Prelo';
+  src: font-url('prelo-medium-webfont.eot');
+  src: font-url('prelo-medium-webfont.eot?#iefix') format('embedded-opentype'),
+  font-url('prelo-medium-webfont.woff') format('woff'),
+  font-url('prelo-medium-webfont.ttf') format('truetype'),
+  font-url('prelo-medium-webfont.svg#ralewaysemibold') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+html {
+  margin: 0 auto;
+}
+
+body {
+  font-family: Prelo;
+}
+.alert, .notice{
+}
 header {
-  background: asset-url('Koala_opacity.jpg', image) no-repeat center;
+  background: asset-url('1_index.jpg', image) no-repeat top center;
   background-size: cover;
-  padding-top:300px; 
-  margin-bottom: 60px; 
+  padding-top: 36em; 
+  margin-bottom: 3em; 
   h1 {
-    color: black;
-    font-size: 88px;
-    font-weight: bold;
+    color: white;
+    font-size: 4.6em;
     text-align: center;
+    margin-bottom: 2em;
   }
   a, a:hover {
-    color: black;
-    font-size: 50px;
+    color: white;
+    font-size: 3em;
     text-decoration: none;
+    border: 0.05em solid white;
+    border-radius: 0.2em;
+    padding: 0.7em;
   }
   div {
-    padding-top:500px; 
+    height: 12em;
+    padding-top: 3.2em; 
     text-align: center;
-    font-size: 40px;
-    line-height: 160%;
-    p:nth-child(1) {
-      border-right: 2px solid #969799;
-    }
+    font-size: 2.2em;
     span {
-      font-size: 70px;
+      color: #E22D28;
+      font-size: 2.9em;
     }
   }
 }
 
 h2 {
   color: black;
-  font-size: 80px;
-  padding-top:15px;
+  font-size: 5em;
 }
 
-h2:after {
-  padding: 0 20px;
-  content: " ";
+h3 {
+  color: grey;
+  font-size: 2.2em;
 }
 
 .projects {
+  /* background: asset-url('2_projects.jpg', image) no-repeat top center; */
+  background-size: cover;
   text-align: center;
   margin-top: 30px;
-  p {
-    color: black;
-    font-size: 50px;
-    padding-bottom:35px;
-    border-bottom: 2px solid #26343e;
-  }
-  p:nth-child(2) {
-    color: #818185;
-    font-size: 40px;
-  }
-  h4 {
-    color: #969799;
-    font-size: 30px;
+  h3 {
+    padding-bottom: 1em;
   }
   a, a:hover {
-    color: #818185;
-    font-size: 30px;
-    border-bottom: 3px solid #969799;
+    color: grey;
+    font-size: 3em;
     text-decoration: none;
+    border: 0.05em solid grey;
+    border-radius: 0.2em;
+    padding: 0.7em;
+  }
+  div.column {
+    padding-bottom: 10em;
+    padding-left: 3em;
+    padding-right: 3em;
+    color: white;
+    h4 {
+      padding-top: 1em;
+      font-size: 2em;
+      margin-top: 0;
+    }
+    h3{
+      padding-bottom: 1em;
+      border-bottom: 0.05em solid white;
+      font-size: 3em;
+      color: white;
+    }
+    p{
+      text-align: left;
+      font-size: 2em;
+    }
+    div{
+      text-align: left;
+      font-size: 2em;
+      padding-left: 0;
+      border-bottom: 0.05em solid;
+    }
+    .right{
+      float: right;
+    }
+    .tools{
+      font-size: 2em;
+    }
+    .under{
+      border: none;
+      margin-top: 0.3em;
+    }
+    .upper{
+      padding-bottom: 0.2em;
+    }
+    .circle_full, .circle_empty {
+      margin: 0.1em;
+      float: left;
+      width: 0.6em;
+      height: 0.6em;
+      border: 0.05em solid white;
+      border-radius: 1em; 
+    }
+    .circle_empty:first-child {
+      margin-left: 0;
+    }
+    .circle_full {  
+      background-color: white;
+    }
+  }
+  .column:nth-child(4n+1) {  
+    background-color: rgba(255, 161, 7, 0.8);
+  }
+  .column:nth-child(4n+2) {  
+    background-color: rgba(79, 228, 194, 0.8);
+  }
+  .column:nth-child(4n+3) {  
+    background-color: rgba(217, 107, 110, 0.8);
+  }
+  .column:nth-child(4n+4) {  
+    background-color: rgba(123, 196, 213, 0.8);
+  }
+  .button {
+    margin-top: 5em;
   }
 }
 
@@ -80,31 +188,46 @@ h2:after {
   h2 {
     margin-top: 300px;
   }
-
-  p {
-    color: #818185;
-    font-size: 40px;
+  h3 {
+    padding-bottom: 2em;
   }
-  li {
-    background-size: cover;
+  p {
+    font-size: 4em;
+    padding: 0.8em 0 0 0.8em;
+  }
+  .item {
     color: black;
-    font-size: 40px;
-    line-height: 100%;
-    list-style: none;
-    padding-top:500px;
-    p {
-      padding-top:300px;
-      text-align:center;
-      b {
-        font-size: 25px;
-      }
+    text-align:left;
+    b {
+      font-size: 2em;
+    }
+    img {
+      width: 100%;
     }
   }
-  li:nth-child(1) {
-    background: asset-url('bence.jpg', image) no-repeat center;
+  .carousel-control {
+    background-image: none;
   }
-  li:nth-child(2) {
-    background: asset-url('juhat.jpg', image) no-repeat center;
+  .carousel-indicators li {
+    border: 1px solid #818185;
+    &.active {
+      background-color: grey;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  .profil {
+    padding: 0;
+    p {
+      padding-left: 0;
+    }
+  }
+  .employee {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    width: 100em;
+    height: 40em;
   }
 }
 
