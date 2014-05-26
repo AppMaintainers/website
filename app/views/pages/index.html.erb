@@ -1,85 +1,49 @@
 
 
-    <header class="text-center", 'col-xs-12'>
+    <header class="text-center">
+      <div class="AM">APP<span>MAINTAINERS</span></div>
+      <div class="line"></div>
+      <img src="/assets/logo.svg">
       <h1>We maintain & build Ruby on Rails apps.</h1>
-      <a href="#"> &#9658; How we do it?</a>
+      <a href="#"> &#9658; How do we do it?</a>
 
-      <div>
-        <p class='col-xs-6'>We closed <br><span><strong>352</strong></span><br> tickets last month</P>
-        <p class='col-xs-6'>We wrote approx. <br><span><strong>1,400</strong></span><br> lines of code today</p>
+      <div class="row">
+        <div class='tomb col-xs-6'>We closed <br><span>352</span><br> tickets last month</div>
+        <div class='tomb col-xs-6'>We wrote approx. <br><span>1,400</span><br> lines of code this week</div>
       </div>
     </header>
 
-    <section class='projects col-xs-12'>
+    <section class='projects'>
       <h2>Projects</h2>
-      <h3>It's not possible to share information about our projects, but we can share our succes stories.</h3>
-      
-      <div>
         <% @cards.each do |card| %>
-          <div class="column">
-            <h4><%= card.card_name %></h4>
+          <div class="project">
+            <h4>#<%= card.card_name.downcase %></h4>
             <h3><%= card.project %></h3>
-            <p><%= card.problem %></p>
-            <p><%= card.solution %></p>
-            <div class='left upper col-xs-5'>Tools</div>
-            <div class='right upper col-xs-5'>Difficulty</div>
-            <div class='tools under col-xs-5'><%= card.category %></div>
-            <div class='right under col-xs-5'>
-              <% (1..5).each do |circle| %>
-                <div class=<%= card.difficulty >= circle ? "circle_full" : "circle_empty" %> ></div>
-              <% end %>
-             </div>
+            <p><%= card.problem %> <br><br>
+            <%= card.solution %></p>
+            <div class="row">
+              <div class='sor col-xs-6'>Tools</div>
+              <div class='sor col-xs-6'>Difficulty</div>
+              <div class='col-xs-6'><%= card.category %></div>
+              <div class='col-xs-6'>
+                <% (1..5).each do |circle| %>
+                  <div class=<%= card.difficulty >= circle ? "circle_full" : "circle_empty" %> ></div>
+                <% end %>
+              </div>
+            </div>
           </div>
         <% end %>
-      </div>
+      
       <div class='button'>
         <a href="#">More projects</a>
       </div>
     </section>
 
-    <section class='our-team'>
-      <h2 class='col-xs-12'>Our Team</h2>
-      <h3 class='col-xs-12'>We believe that good communication is just as important as coding. Which means that you will be in direct contact with our lead developers.</h3>
-      <!-- Carousel -->
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <div>
-              <img src="/assets/Bence_2.jpg">
-              <p>Bence Erdős</p>
-              <div class="carousel-caption">
-                <h3>CEO</h3>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div>
-              <img src="/assets/Attila.jpg">
-              <p>Attila Juhász</p>
-              <div class="carousel-caption">
-                <h3>CTO</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
-      </div>
+    <section class='team'>
+      <h2>Our Team</h2>
+      <p>We believe that good communication is just as important as coding. Which means that you will be in direct contact with our lead developers.</p>
       
-      <div class="bosses">
+      <div class="row bosses">
         <div class='profil col-xs-6'>
           <img src="/assets/Bence_2.jpg">
           <p>Bence Erdős</p>
@@ -87,38 +51,39 @@
         </div>
         <div class='profil col-xs-6'>
           <img src="/assets/Attila.jpg">
-          <p>Juhász Attila</p>
+          <p>Attila Juhász</p>
           <h3>cto</h3>
         </div>
       </div>
 
-      <div class="employee">
+      <div class="row employee">
         <div class='profil col-xs-3'>
           <img src="/assets/Boti.jpg">
           <p>Botond Erdős</p>
-          <h3>sitebuilder</h3>
+          <h3></h3>
         </div>
         <div class='profil col-xs-3'>
           <img src="/assets/Soma.jpg">
           <p>Soma Stágel</p>
-          <h3>sitebuilder</h3>
+          <h3></h3>
         </div>
         <div class='profil col-xs-3'>
           <img src="/assets/Gulu.jpg">
           <p>Gergely Gulu</p>
-          <h3>sitebuilder</h3>
+          <h3></h3>
         </div>
         <div class='profil col-xs-3'>
           <img src="/assets/Maci.jpg">
           <p>Laci Maci</p>
-          <h3>sitebuilder</h3>
+          <h3></h3>
         </div>
       </div>
     </section>
 
-    <section class='work col-xs-12'>
+    <section class='workstyle'>
       <h2>How we work</h1>
       <p>We start every project with a personal discussion with the project stakeholders. We assess the task, define the goals and we create a detailed timing.</p>
+      <!--
       <video width="320" height="240" controls>
         <source src="movie.mp4" type="video/mp4">
         <source src="movie.ogg" type="video/ogg">
@@ -126,6 +91,7 @@
           <embed src="movie.swf" width="320" height="240">
         </object> 
       </video>
+      -->
       <h3>We know that every project is unique. We can either adapt our workflow to fit your environment (code repository, ticketing system, etc.) or we can get you familiar with our tried and tested industry standard tools. We operate our projects in two different modes: building and maintaining.
       <br>
       <br>
@@ -137,19 +103,6 @@
       ~/.maintain
       <br>
       In maintenance mode we continuously monitor your project and act instantly if needed.</h3>
-    </section>
-
-    <section class='toolkit col-xs-12'>
-      <h2>Toolkit</h1>
-      <p>We use these stuff</p>
-      
-      <ul>
-        <li>Frameworks</li>
-        <li>Databases</li>
-        <li>Gems</li>
-        <li>UI</li>
-        <li>Hosting solutions</li>
-      </ul>
     </section>
 
     <section class='contact col-xs-12'>
