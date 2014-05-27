@@ -66,21 +66,24 @@ body {
 }
 
 header {
-  padding-top: 1.5em;
-  background-color: grey; 
-  color: white;
-  .AM {
-    margin-left: 1em;
-    font-size: 1.6em;
-    text-align: left;
-    padding-bottom: 0.2em;
-    span {
-      font-family: Prelo_bold;
+  .video {
+    background-color: grey;
+    padding-top: 1.5em; 
+    color: white;
+    padding-bottom: 3.5em;
+    .AM {
+      margin-left: 1em;
+      font-size: 1.6em;
+      text-align: left;
+      padding-bottom: 0.2em;
+      span {
+        font-family: Prelo_bold;
+      }
     }
   }
   .line {
     margin-left: 1.6em;
-    width: 22em;
+    margin-right: 1.6em;
     height: 0.2em;
     background-color: rgba(255, 255, 255, 0.2);
   }
@@ -104,9 +107,10 @@ header {
     border-radius: 0.2em;
   }
   .row {
-    margin: 2.5em 0em 0em 0em;
-
-    background-color: lightgrey;
+    margin: 0em;
+    background: asset-url('fallers.svg', image) no-repeat center;
+    background-size: cover;
+    height: 465px;
     color: black;
     padding-top: 1.5em;
     height: 12em;
@@ -139,6 +143,9 @@ h3 {
     font-family: Avenir_medium;
     margin-top: 0em;
   }
+  h4 {
+    color: rgba(255, 255, 255, 0.6);
+  }
   p {
     font-size: 1.3em;
   }
@@ -150,73 +157,94 @@ h3 {
     border-radius: 0.2em;
     padding: 0.7em;
   }
-  div.project {
-    padding-bottom: 2em;
-    padding-left: 2em;
-    padding-right: 2em;
+  .project {
     color: white;
     h4 {
       padding-top: 1em;
       margin-top: 0em;
     }
     h3{
-      font-family: Prelo_book;
+      font-family: Avenir_medium;
       padding-bottom: 0.8em;
       margin-top: 0.6em;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
       font-size: 1.6em;
       color: white;
     }
     p{
+      font-family: Prelo_light;
       margin-top: 0.8em;
       text-align: left;
       font-size: 1.3em;
       padding-bottom: 1.8em;
     }
-    .row {
-      text-align: left;
-      font-size: 1.4em;
-      font-family: Prelo_book;
-      margin: 0em;
-      div{
-        padding-left: 0em;
-      }
+  }
+  .row {
 
-      .sor {
-        border-bottom: 1px solid white;
-      }
+    text-align: left;
+    font-size: 1.4em;
+    font-family: Prelo_book;
+    margin: 0em;
+    div{
+      font-family: Avenir_roman;
+      padding-left: 0em;
+    }
+    div:nth-child(3) {
+      font-family: Prelo_light;
+    }
 
-      .circle_full, .circle_empty {
-        margin: 0.25em;
-        float: left;
-        width: 0.8em;
-        height: 0.8em;
-        border: 0.1em solid white;
-        border-radius: 0.4em; 
-      }
+    .sor {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
 
-      .circle_full {  
-        background-color: white;
-      }
+    .circle_full, .circle_empty {
+      margin: 0.15em;
+      float: left;
+      width: 0.8em;
+      height: 0.8em;
+      border: 0.1em solid white;
+      border-radius: 50%; 
+    }
+
+    .circle_full {  
+      background-color: white;
     }
   }
   .project:nth-child(4n+1) {  
     background-color: rgba(123, 196, 213, 0.8);
+    .project-footer{
+      background-color: rgba(105, 198, 219, 0.8);
+    }
   }
   .project:nth-child(4n+2) {  
     background-color: rgba(255, 161, 7, 0.8);
+    .project-footer{
+      background-color: rgba(252, 155, 0, 0.8);
+    }
   }
   .project:nth-child(4n+3) {  
     background-color: rgba(79, 228, 196, 0.8);
+    .project-footer{
+      background-color: rgba(66, 229, 191, 0.8);
+    }
   }
   .project:nth-child(4n+4) {  
     background-color: rgba(217, 107, 110, 0.8);
+    .project-footer{
+      background-color: rgba(221, 90, 95, 0.8);
+    }
   }
   .button {
     margin-top: 5em;
     font-family: Prelo_book;
     font-size: 0.5em;
     padding: 0.6em;
+  }
+  .project-header {
+    padding: 0em 2em;
+  }
+  .project-footer {
+    padding: 2em;
   }
 }
 
@@ -262,35 +290,43 @@ h3 {
     padding: 0.3em 1em 1.2em 1em;
   }
   h3 {
+    line-height: 1.428571429em;
     text-align: left;
     color: grey;
     font-size: 1.3em;
     padding: 0.3em 1em 1.2em 1em;
+    span {
+      font-family: Avenir_medium;
+    }
   }
 }
-/*
+
 .contact {
   text-align: center;
   h2 {
-    margin-top: 300px;
+    margin-top: 2em;
   }
   p {
-    color: #818185;
-    font-size: 40px;
-    padding-bottom:40px;
+    color: grey;
+    font-size:1.3em;
+    padding-bottom:1em;
   }
-  li {
-    color: black;
-    list-style: none;
-    padding-top:5px;
-    padding-bottom:20px;
-    h5 {
-      color: #818185;
-      font-size: 40px;      
-    }
-    p {
+  ul{
+    padding-left:0em;
+    li {
       color: black;
-      font-size: 50px;
+      list-style: none;
+      padding-top:0em;
+
+      h5 {
+        color: #818185;
+        font-size: 1.3em;      
+      }
+      p {
+        color: black;
+        font-size: 1.3em;
+        font-family: Prelo_bold;
+      }
     }
   }
 }
@@ -300,7 +336,7 @@ h3 {
   background-size: cover;
   height: 465px;
 }
-*/
+
   img {
     width: 100%;
   }

@@ -1,11 +1,13 @@
 
 
     <header class="text-center">
-      <div class="AM">APP<span>MAINTAINERS</span></div>
-      <div class="line"></div>
-      <img src="/assets/logo.svg">
-      <h1>We maintain & build Ruby on Rails apps.</h1>
-      <a href="#"> &#9658; How do we do it?</a>
+      <div class="video">
+        <div class="AM">APP<span>MAINTAINERS</span></div>
+        <div class="line"></div>
+        <img src="/assets/logo.svg">
+        <h1>We maintain & build Ruby on Rails apps.</h1>
+        <a href="#"> &#9658; How do we do it?</a>
+      </div>
 
       <div class="row">
         <div class='tomb col-xs-6'>We closed <br><span>352</span><br> tickets last month</div>
@@ -17,18 +19,22 @@
       <h2>Projects</h2>
         <% @cards.each do |card| %>
           <div class="project">
-            <h4>#<%= card.card_name.downcase %></h4>
-            <h3><%= card.project %></h3>
-            <p><%= card.problem %> <br><br>
-            <%= card.solution %></p>
-            <div class="row">
-              <div class='sor col-xs-6'>Tools</div>
-              <div class='sor col-xs-6'>Difficulty</div>
-              <div class='col-xs-6'><%= card.category %></div>
-              <div class='col-xs-6'>
-                <% (1..5).each do |circle| %>
-                  <div class=<%= card.difficulty >= circle ? "circle_full" : "circle_empty" %> ></div>
-                <% end %>
+            <div class="project-header">
+              <h4>#<%= card.card_name.downcase %></h4>
+              <h3><%= card.project %></h3>
+              <p><%= card.problem %> <br><br>
+              <%= card.solution %></p>
+            </div>
+            <div class="project-footer">
+              <div class="row">
+                <div class='sor col-xs-5'>Tools</div>
+                <div class='sor col-xs-offset-2 col-xs-5'>Difficulty</div>
+                <div class='col-xs-5'><%= card.category %></div>
+                <div class='col-xs-offset-2 col-xs-5'>
+                  <% (1..5).each do |circle| %>
+                    <div class=<%= card.difficulty >= circle ? "circle_full" : "circle_empty" %> ></div>
+                  <% end %>
+                </div>
               </div>
             </div>
           </div>
@@ -81,7 +87,7 @@
     </section>
 
     <section class='workstyle'>
-      <h2>How we work</h1>
+      <h2>How we work</h2>
       <p>We start every project with a personal discussion with the project stakeholders. We assess the task, define the goals and we create a detailed timing.</p>
       <!--
       <video width="320" height="240" controls>
@@ -95,12 +101,12 @@
       <h3>We know that every project is unique. We can either adapt our workflow to fit your environment (code repository, ticketing system, etc.) or we can get you familiar with our tried and tested industry standard tools. We operate our projects in two different modes: building and maintaining.
       <br>
       <br>
-      ~/.build
+      <span>~/.build</span>
       <br>
       When we build a new project we define clear milestones. We also divide the larger milestones into smaller sprints which helps us and you effectively track the project.
       <br>
       <br>
-      ~/.maintain
+      <span>~/.maintain</span>
       <br>
       In maintenance mode we continuously monitor your project and act instantly if needed.</h3>
     </section>
