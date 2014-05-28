@@ -1,3 +1,22 @@
+      <div class="menu">
+        <a href="#" class="toggle-nav" style="color: pink; font-size: 20px;"><i class="fa fa-times"></i></a>
+        <h2>My Menu</h1>
+        <p class="lead">Put any HTML you want here.</p>
+        <p>Style it however you want.</p>
+       
+        <ul>
+          <li>Free to scroll up and down</li>
+          <li>But not left and write</li>
+        </ul>
+      </div>
+     
+    
+     
+      <a href="#" class="toggle-nav btn btn-lg btn-success" id="big-sexy"><i class="fa fa-bars"></i> Toggle Nav</a>
+     
+      <h1 class="text-center">Off Canvas Menu Tutorial</h1>
+     
+      <p class="lead text-center">Basic demo showing how to easily implement an Off Canvas Menu by <a href="http://scotch.io/tutorials/off-canvas-menus-with-css3-transitions-and-transforms">scotch.io</a>.</p>
 
 
     <header class="text-center">
@@ -20,16 +39,15 @@
         <% @cards.each do |card| %>
           <div class="project">
             <div class="project-header">
-              <h4>#<%= card.card_name.downcase %></h4>
+              <h4><%= card.category.split.map{|cat| "##{cat}"}.join(", ") %></h4>
               <h3><%= card.project %></h3>
-              <p><%= card.problem %> <br><br>
-              <%= card.solution %></p>
+              <p><%= card.solution %></p>
             </div>
             <div class="project-footer">
               <div class="row">
                 <div class='sor col-xs-5'>Tools</div>
                 <div class='sor col-xs-offset-2 col-xs-5'>Difficulty</div>
-                <div class='col-xs-5'><%= card.category %></div>
+                <div class='col-xs-5'><%= card.tech.to_s.split.join(", ") %></div>
                 <div class='col-xs-offset-2 col-xs-5'>
                   <% (1..5).each do |circle| %>
                     <div class=<%= card.difficulty >= circle ? "circle_full" : "circle_empty" %> ></div>
@@ -62,33 +80,24 @@
         </div>
       </div>
 
-      <div class="row employee">
-        <div class='profil col-xs-3'>
+      <%# <div class="row employee">
+        <div class='profil col-xs-6'>
           <img src="/assets/Boti.jpg">
           <p>Botond Erdős</p>
           <h3></h3>
         </div>
-        <div class='profil col-xs-3'>
+        <div class='profil col-xs-6'>
           <img src="/assets/Soma.jpg">
           <p>Soma Stágel</p>
           <h3></h3>
         </div>
-        <div class='profil col-xs-3'>
-          <img src="/assets/Gulu.jpg">
-          <p>Gergely Gulu</p>
-          <h3></h3>
-        </div>
-        <div class='profil col-xs-3'>
-          <img src="/assets/Maci.jpg">
-          <p>Laci Maci</p>
-          <h3></h3>
-        </div>
-      </div>
+      </div> %>
     </section>
 
     <section class='workstyle'>
       <h2>How we work</h2>
       <p>We start every project with a personal discussion with the project stakeholders. We assess the task, define the goals and we create a detailed timing.</p>
+      <img src="/assets/video.jpg">
       <!--
       <video width="320" height="240" controls>
         <source src="movie.mp4" type="video/mp4">
@@ -138,11 +147,11 @@
 
         <li>
           <h5>office</h5>
-          <p>H-1118 Budapest <br>Schweidel u. 27/b</p>
+          <p>H-1115 Budapest <br>Bártfai utca 54.</p>
         </li>
       </ul>
-    </section>
 
-    <section class='map'>
-      <h1 class='col-xs-12'></h1>
+      <section class='map'>
+        <div id="map-canvas"></div>
+      </section>
     </section>
