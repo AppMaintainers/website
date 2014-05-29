@@ -1,157 +1,148 @@
       <div class="menu">
-        <a href="#" class="toggle-nav" style="color: pink; font-size: 20px;"><i class="fa fa-times"></i></a>
-        <h2>My Menu</h1>
-        <p class="lead">Put any HTML you want here.</p>
-        <p>Style it however you want.</p>
-       
-        <ul>
-          <li>Free to scroll up and down</li>
-          <li>But not left and write</li>
-        </ul>
-      </div>
-     
-    
-     
-      <a href="#" class="toggle-nav btn btn-lg btn-success" id="big-sexy"><i class="fa fa-bars"></i> Toggle Nav</a>
-     
-      <h1 class="text-center">Off Canvas Menu Tutorial</h1>
-     
-      <p class="lead text-center">Basic demo showing how to easily implement an Off Canvas Menu by <a href="http://scotch.io/tutorials/off-canvas-menus-with-css3-transitions-and-transforms">scotch.io</a>.</p>
-
-
-    <header class="text-center">
-      <div class="video">
-        <div class="AM">APP<span>MAINTAINERS</span></div>
-        <div class="line"></div>
-        <img src="/assets/logo.svg">
-        <h1>We maintain & build Ruby on Rails apps.</h1>
-        <a href="#"> &#9658; How do we do it?</a>
+        <%# <a href="#" class="toggle-nav" style="color: pink; font-size: 20px;"><i class="fa fa-times"></i></a> %>
+        <div class="fixed">
+        <img src="/assets/logo_.png">
+          <ul>
+            <li>Projects</li>
+            <li>Our Team</li>
+            <li>How we work</li>
+            <li>Contact</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="row">
-        <div class='tomb col-xs-6'>We closed <br><span>352</span><br> tickets last month</div>
-        <div class='tomb col-xs-6'>We wrote approx. <br><span>1,400</span><br> lines of code this week</div>
-      </div>
-    </header>
-
-    <section class='projects'>
-      <h2>Projects</h2>
-        <% @cards.each do |card| %>
-          <div class="project">
-            <div class="project-header">
-              <h4><%= card.category.split.map{|cat| "##{cat}"}.join(", ") %></h4>
-              <h3><%= card.project %></h3>
-              <p><%= card.solution %></p>
+        <header class="text-center">
+          <div class="video">
+            <div class="h">
+              <a href="javascript:false;" class="toggle-nav btn btn-lg btn-success" id="big-sexy"><i class="fa fa-bars"></i> Toggle Nav</a>
+              <div class="AM">APP<span>MAINTAINERS</span></div>
             </div>
-            <div class="project-footer">
-              <div class="row">
-                <div class='sor col-xs-5'>Tools</div>
-                <div class='sor col-xs-offset-2 col-xs-5'>Difficulty</div>
-                <div class='col-xs-5'><%= card.tech.to_s.split.join(", ") %></div>
-                <div class='col-xs-offset-2 col-xs-5'>
-                  <% (1..5).each do |circle| %>
-                    <div class=<%= card.difficulty >= circle ? "circle_full" : "circle_empty" %> ></div>
-                  <% end %>
+            <div class="line"></div>
+            <img src="/assets/logo.svg">
+            <h1>We maintain & build Ruby on Rails apps.</h1>
+            <a href="#"> &#9658; How do we do it?</a>
+          </div>
+
+          <div class="row">
+            <div class='col-xs-6'>We closed <br><span>352</span><br> tickets last month</div>
+            <div class='col-xs-6'>We wrote approx. <br><span>1,400</span><br> lines of code this week</div>
+          </div>
+        </header>
+
+        <section class='projects'>
+          <h2>Projects</h2>
+            <% @cards.each do |card| %>
+              <div class="project" style="z-index: <%= card.id.to_s %>">
+                <h4><%= card.category.split.map{|cat| "##{cat}"}.join(", ") %></h4>
+                <h3><%= card.project %></h3>
+                <p><%= card.solution %></p>
+                <div class="row">
+                  <div class='sor col-xs-5'>Tools</div>
+                  <div class='sor col-xs-offset-2 col-xs-5'>Difficulty</div>
+                  <div class='col-xs-5'><%= card.tech.to_s.split.join(", ") %></div>
+                  <div class='col-xs-offset-2 col-xs-5'>
+                    <% (1..5).each do |circle| %>
+                      <div class=<%= card.difficulty >= circle ? "circle_full" : "circle_empty" %> ></div>
+                    <% end %>
+                  </div>
                 </div>
               </div>
+            <% end %>
+          
+          <div class='button'>
+            <a href="#">More projects</a>
+          </div>
+        </section>
+
+        <section class='team'>
+          <h2>Our Team</h2>
+          <p>We believe that good communication is just as important as coding. Which means that you will be in direct contact with our lead developers.</p>
+          
+          <div class="row bosses">
+            <div class='profil col-xs-6'>
+              <img src="/assets/Bence_2.jpg">
+              <p>Bence Erdős</p>
+              <h3>ceo</h3>
+            </div>
+            <div class='profil col-xs-6'>
+              <img src="/assets/Attila.jpg">
+              <p>Attila Juhász</p>
+              <h3>cto</h3>
             </div>
           </div>
-        <% end %>
-      
-      <div class='button'>
-        <a href="#">More projects</a>
-      </div>
-    </section>
 
-    <section class='team'>
-      <h2>Our Team</h2>
-      <p>We believe that good communication is just as important as coding. Which means that you will be in direct contact with our lead developers.</p>
-      
-      <div class="row bosses">
-        <div class='profil col-xs-6'>
-          <img src="/assets/Bence_2.jpg">
-          <p>Bence Erdős</p>
-          <h3>ceo</h3>
-        </div>
-        <div class='profil col-xs-6'>
-          <img src="/assets/Attila.jpg">
-          <p>Attila Juhász</p>
-          <h3>cto</h3>
-        </div>
-      </div>
+          <%# <div class="row employee">
+            <div class='profil col-xs-6'>
+              <img src="/assets/Boti.jpg">
+              <p>Botond Erdős</p>
+              <h3></h3>
+            </div>
+            <div class='profil col-xs-6'>
+              <img src="/assets/Soma.jpg">
+              <p>Soma Stágel</p>
+              <h3></h3>
+            </div>
+          </div> %>
+        </section>
 
-      <%# <div class="row employee">
-        <div class='profil col-xs-6'>
-          <img src="/assets/Boti.jpg">
-          <p>Botond Erdős</p>
-          <h3></h3>
-        </div>
-        <div class='profil col-xs-6'>
-          <img src="/assets/Soma.jpg">
-          <p>Soma Stágel</p>
-          <h3></h3>
-        </div>
-      </div> %>
-    </section>
+        <section class='workstyle'>
+          <h2>How we work</h2>
+          <p>We start every project with a personal discussion with the project stakeholders. We assess the task, define the goals and we create a detailed timing.</p>
+          <img src="/assets/video.jpg">
+          <!--
+          <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            <object data="movie.mp4" width="320" height="240">
+              <embed src="movie.swf" width="320" height="240">
+            </object> 
+          </video>
+          -->
+          <h3>We know that every project is unique. We can either adapt our workflow to fit your environment (code repository, ticketing system, etc.) or we can get you familiar with our tried and tested industry standard tools. We operate our projects in two different modes: building and maintaining.
+          <br>
+          <br>
+          <span>~/.build</span>
+          <br>
+          When we build a new project we define clear milestones. We also divide the larger milestones into smaller sprints which helps us and you effectively track the project.
+          <br>
+          <br>
+          <span>~/.maintain</span>
+          <br>
+          In maintenance mode we continuously monitor your project and act instantly if needed.</h3>
+        </section>
 
-    <section class='workstyle'>
-      <h2>How we work</h2>
-      <p>We start every project with a personal discussion with the project stakeholders. We assess the task, define the goals and we create a detailed timing.</p>
-      <img src="/assets/video.jpg">
-      <!--
-      <video width="320" height="240" controls>
-        <source src="movie.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        <object data="movie.mp4" width="320" height="240">
-          <embed src="movie.swf" width="320" height="240">
-        </object> 
-      </video>
-      -->
-      <h3>We know that every project is unique. We can either adapt our workflow to fit your environment (code repository, ticketing system, etc.) or we can get you familiar with our tried and tested industry standard tools. We operate our projects in two different modes: building and maintaining.
-      <br>
-      <br>
-      <span>~/.build</span>
-      <br>
-      When we build a new project we define clear milestones. We also divide the larger milestones into smaller sprints which helps us and you effectively track the project.
-      <br>
-      <br>
-      <span>~/.maintain</span>
-      <br>
-      In maintenance mode we continuously monitor your project and act instantly if needed.</h3>
-    </section>
+        <section class="contact">
+          <h2>Contact us</h2>
+          <p>We are eager to hear about your project!</p>
+          
+          <ul>
+            <li>
+              <h5>email</h5>
+              <p>hello@appmaintainers.hu</p>
+            </li>
+            
+            <li>
+              <h5>phone</h5>
+              <p>+36 30 4720431</p>
+            </li>
 
-    <section class='contact col-xs-12'>
-      <h2>Contact us</h2>
-      <p>We are eager to hear about your project!</p>
-      
-      <ul>
-        <li>
-          <h5>email</h5>
-          <p>hello@appmaintainers.hu</p>
-        </li>
-        
-        <li>
-          <h5>phone</h5>
-          <p>+36 30 4720431</p>
-        </li>
+            <li>
+              <h5>skype</h5>
+              <p>app_maintainers</p>
+            </li>
 
-        <li>
-          <h5>skype</h5>
-          <p>app_maintainers</p>
-        </li>
+            <li>
+              <h5>linkdin</h5>
+              <p>linkdin.com/appmaintainers</p>
+            </li>
 
-        <li>
-          <h5>linkdin</h5>
-          <p>linkdin.com/appmaintainers</p>
-        </li>
+            <li>
+              <h5>office</h5>
+              <p>H-1115 Budapest <br>Bártfai utca 54.</p>
+            </li>
+          </ul>
 
-        <li>
-          <h5>office</h5>
-          <p>H-1115 Budapest <br>Bártfai utca 54.</p>
-        </li>
-      </ul>
-
-      <section class='map'>
-        <div id="map-canvas"></div>
-      </section>
-    </section>
+          <section class='map'>
+            <div id="map-canvas"></div>
+          </section>
+        </section>
