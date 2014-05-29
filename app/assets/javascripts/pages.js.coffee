@@ -14,3 +14,21 @@ initialize = ->
   return
 google.maps.event.addDomListener window, "load", initialize
 
+$ ->
+  $(".toggle-nav").click ->
+    toggleNav()
+    return
+  return
+
+toggleNav = ->
+  if $(".wrapper").hasClass("show-nav")
+    $(".wrapper").removeClass "show-nav"
+  else
+    $(".wrapper").addClass "show-nav"
+  return
+
+$ ->
+  $(".project").click ->
+    $(".project.active").removeClass "active"
+    $(this).addClass "active"
+    return
