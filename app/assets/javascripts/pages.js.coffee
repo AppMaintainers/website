@@ -14,3 +14,18 @@ initialize = ->
   return
 google.maps.event.addDomListener window, "load", initialize
 
+
+jQuery ($) ->
+  date = new Date()
+
+  # data for the counters
+  month_data = [42, 68, 72, 53, 103, 84, 63, 29, 48, 61, 98, 110]
+
+  $("").countTo
+    from: month_data[date.getMonth()] / 2
+    to: month_data[date.getMonth()]
+    speed: 2000
+    refreshInterval: 50
+
+
+  return
