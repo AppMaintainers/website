@@ -7,6 +7,7 @@
     # how many times to update the value, and how much to increment the value on each update
     loops = Math.ceil(options.speed / options.refreshInterval)
     increment = (options.to - options.from) / loops
+    value = options.from
     $(this).each ->
       updateTimer = ->
         value += increment
