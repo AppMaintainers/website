@@ -1,24 +1,28 @@
       <div class="menu">
-        <%# <a href="#" class="toggle-nav" style="color: pink; font-size: 20px;"><i class="fa fa-times"></i></a> %>
+        <%= image_tag("bigapplogo.svg") %>
         <div class="fixed">
-        <img src="/assets/logo_.png">
           <ul>
-            <li>Projects</li>
-            <li>Our Team</li>
-            <li>How we work</li>
-            <li>Contact</li>
+            <li href="javascript: $.scrollTo('#projects', 800, {easing:'swing'});"><%= link_to "Projects", "#projects" %></li>
+            <li><%= link_to "Our Team", "#team" %></li>
+            <li><%= link_to "How we work", "#workstyle" %></li>
+            <li><%= link_to "Contact", "#contact" %></li>
           </ul>
+          <p>Call us:<br>+36 20 534 1904</p>
         </div>
       </div>
-
+      <div class="content">
         <header class="text-center">
           <div class="video">
             <div class="h">
-              <a href="javascript:false;" class="toggle-nav btn btn-lg btn-success" id="big-sexy"><i class="fa fa-bars"></i> Toggle Nav</a>
+              <a href="javascript:false"; class="toggle-nav btn btn-lg btn-success">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
               <div class="AM">APP<span>MAINTAINERS</span></div>
             </div>
             <div class="line"></div>
-            <img src="/assets/logo.svg">
+            <%= image_tag("logo.svg") %>
             <h1>We maintain & build Ruby on Rails apps.</h1>
             <a href="#"> &#9658; How do we do it?</a>
           </div>
@@ -29,10 +33,10 @@
           </div>
         </header>
 
-        <section class='projects'>
+        <section class="projects", id="projects">
           <h2>Projects</h2>
             <% @cards.each do |card| %>
-              <div class="project" style="z-index: <%= card.id.to_s %>">
+              <div class="project"; style="z-index: <%= card.id %>">
                 <h4><%= card.category.split.map{|cat| "##{cat}"}.join(", ") %></h4>
                 <h3><%= card.project %></h3>
                 <p><%= card.solution %></p>
@@ -46,6 +50,7 @@
                     <% end %>
                   </div>
                 </div>
+                <div class="arrow"></div>
               </div>
             <% end %>
           
@@ -54,18 +59,18 @@
           </div>
         </section>
 
-        <section class='team'>
+        <section class="team", id="team">
           <h2>Our Team</h2>
           <p>We believe that good communication is just as important as coding. Which means that you will be in direct contact with our lead developers.</p>
           
           <div class="row bosses">
             <div class='profil col-xs-6'>
-              <img src="/assets/Bence_2.jpg">
+              <%= image_tag("Bence_2.jpg") %>
               <p>Bence Erdős</p>
               <h3>ceo</h3>
             </div>
             <div class='profil col-xs-6'>
-              <img src="/assets/Attila.jpg">
+              <%= image_tag("Attila.jpg") %>
               <p>Attila Juhász</p>
               <h3>cto</h3>
             </div>
@@ -73,22 +78,22 @@
 
           <%# <div class="row employee">
             <div class='profil col-xs-6'>
-              <img src="/assets/Boti.jpg">
+              <%= image_tag("Boti.jpg") %
               <p>Botond Erdős</p>
               <h3></h3>
             </div>
             <div class='profil col-xs-6'>
-              <img src="/assets/Soma.jpg">
+              <%= image_tag("Soma.jpg") %
               <p>Soma Stágel</p>
               <h3></h3>
             </div>
           </div> %>
         </section>
 
-        <section class='workstyle'>
+        <section class="workstyle", id="workstyle">
           <h2>How we work</h2>
           <p>We start every project with a personal discussion with the project stakeholders. We assess the task, define the goals and we create a detailed timing.</p>
-          <img src="/assets/video.jpg">
+          <%= image_tag("video.jpg") %>
           <!--
           <video width="320" height="240" controls>
             <source src="movie.mp4" type="video/mp4">
@@ -111,19 +116,19 @@
           In maintenance mode we continuously monitor your project and act instantly if needed.</h3>
         </section>
 
-        <section class="contact">
+        <section class="contact", id="contact">
           <h2>Contact us</h2>
           <p>We are eager to hear about your project!</p>
           
           <ul>
             <li>
               <h5>email</h5>
-              <p>hello@appmaintainers.hu</p>
+              <p><%= mail_to "hello@appmaintainers.com" %></p>
             </li>
             
             <li>
               <h5>phone</h5>
-              <p>+36 30 4720431</p>
+              <p>+36 20 534 1904</p>
             </li>
 
             <li>
@@ -146,3 +151,4 @@
             <div id="map-canvas"></div>
           </section>
         </section>
+      </div>

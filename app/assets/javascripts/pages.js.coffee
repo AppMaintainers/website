@@ -39,8 +39,9 @@ jQuery ($) ->
 
 # navigation
 $ ->
-  $(".toggle-nav").click ->
+  $(".toggle-nav").click (e) ->
     toggleNav()
+    e.preventDefault()
     return
   return
 
@@ -56,3 +57,14 @@ $ ->
     $(".project.active").removeClass "active"
     $(this).addClass "active"
     return
+
+$(document).keyup (e) ->
+  
+  toggleNav()  if $("#wrapper").hasClass("show-nav")  if e.keyCode is 27
+  return
+
+$(document).mouseup () ->
+  toggleNav() if $("#wrapper").hasClass("show-nav")  
+  return
+
+$(li).scrollTo "li:eq(15)", 1000
