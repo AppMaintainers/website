@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap.min
 //= require counter
+//= require jquery.scrollTo.min
 //= require pages

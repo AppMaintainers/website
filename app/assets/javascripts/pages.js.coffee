@@ -4,6 +4,7 @@ initialize = ->
     zoom: 16
     center: myLatlng
     disableDefaultUI: true
+    draggable: ($(document).width() > 480)
 
   map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions)
   marker = new google.maps.Marker(
@@ -55,6 +56,11 @@ $ ->
   $(".project").click ->
     $(".project.active").removeClass "active"
     $(this).addClass "active"  
+    return
+
+  $(".menu li a").on "click", (e) ->
+    e.preventDefault()
+    setTimeout "$.scrollTo( $(\"" + $(this).attr("href") + "\"), 500 )", 500
     return
 
   return

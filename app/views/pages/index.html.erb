@@ -2,7 +2,7 @@
         <%= image_tag("bigapplogo.svg") %>
         <div class="fixed">
           <ul>
-            <li href="javascript: $.scrollTo('#projects', 800, {easing:'swing'});"><%= link_to "Projects", "#projects" %></li>
+            <li><%= link_to "Projects", "#projects" %></li>
             <li><%= link_to "Our Team", "#team" %></li>
             <li><%= link_to "How we work", "#workstyle" %></li>
             <li><%= link_to "Contact", "#contact" %></li>
@@ -133,17 +133,18 @@
 
             <li>
               <h5>skype</h5>
-              <p>app_maintainers</p>
+              <p><%= link_to "Bence Erdős", "skype:bence_erdos" %>,
+              <%= link_to "Attila Juhász", "skype:goraffe" %></p>
             </li>
 
             <li>
-              <h5>linkdin</h5>
-              <p>linkdin.com/appmaintainers</p>
+              <h5>linkedin</h5>
+              <p><%= link_to "appmaintainers", "https://www.linkedin.com/company/app-maintainers-limited", :target => "_blank" %></p>
             </li>
 
             <li>
               <h5>office</h5>
-              <p>H-1115 Budapest <br>Bártfai utca 54.</p>
+              <p><%= link_to raw("H-1115 Budapest <br> Bártfai utca 54."), "https://www.google.hu/maps/place/B%C3%A1rtfai+utca+54/@47.464979,19.0290019,17z/data=!3m1!4b1!4m2!3m1!1s0x4741ddbf76f1c81f:0xba4de98c0266d5c8", :target => "_blank" %></p>
             </li>
           </ul>
 
