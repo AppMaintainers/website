@@ -15,7 +15,7 @@ initialize = ->
 google.maps.event.addDomListener window, "load", initialize
 
 # date spinners
-jQuery ($) ->
+$ ->
   date = new Date()
 
   # data for the counters
@@ -34,15 +34,29 @@ jQuery ($) ->
     speed: 2000
     refreshInterval: 50
 
-  return
-
-
-# navigation
-$ ->
+  # navigation
   $(".toggle-nav").click (e) ->
     toggleNav()
     e.preventDefault()
     return
+
+  # esc from menu
+  $(document).keyup (e) ->  
+    toggleNav()  if $("#wrapper").hasClass("show-nav")  if e.keyCode is 27
+    return
+  $(document).mouseup () ->
+    toggleNav() if $("#wrapper").hasClass("show-nav")  
+    return
+
+  #$(".toggle-nav").click ->
+  #  $('.wrapper').toggleClass('show-nav')
+
+  # project
+  $(".project").click ->
+    $(".project.active").removeClass "active"
+    $(this).addClass "active"  
+    return
+
   return
 
 toggleNav = ->
@@ -51,20 +65,3 @@ toggleNav = ->
   else
     $(".wrapper").addClass "show-nav"
   return
-
-$ ->
-  $(".project").click ->
-    $(".project.active").removeClass "active"
-    $(this).addClass "active"
-    return
-
-$(document).keyup (e) ->
-  
-  toggleNav()  if $("#wrapper").hasClass("show-nav")  if e.keyCode is 27
-  return
-
-$(document).mouseup () ->
-  toggleNav() if $("#wrapper").hasClass("show-nav")  
-  return
-
-$(li).scrollTo "li:eq(15)", 1000
