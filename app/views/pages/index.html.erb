@@ -13,23 +13,32 @@
       <div class="content">
         <header class="text-center">
           <div class="video">
-            <div>
-              <a href="javascript:false"; class="toggle-nav btn btn-lg btn-success">
+            <div>              
+              <a href="javascript:false"; class="visible-xs toggle-nav btn btn-lg btn-success">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </a>
               <div class="AM">APP<span>MAINTAINERS</span></div>
+              <ul class="hidden-xs">
+                <li><%= link_to "Projects", "#projects" %></li>
+                <li><%= link_to "Our Team", "#team" %></li>
+                <li><%= link_to "How we work", "#workstyle" %></li>
+                <li><%= link_to "Contact us", "#contact" %></li>
+              </ul>
             </div>
             <div class="line"></div>
             <%= image_tag("logo.svg") %>
-            <h1>We maintain & build Ruby on Rails apps.</h1>
-            <a href="#"> &#9658; How do we do it?</a>
+            <div class="title">
+              <h1>We maintain & build Ruby on Rails apps.</h1>
+              <p class="hidden-xs">From a quick hotfix to large-scale web apps we are here to help you with your project.</p>
+              <a href="#"> &#9658; How do we do it?</a>
+            </div>
           </div>
 
           <div class="row">
-            <div class='col-xs-6'>We closed <br><span id="tickets_last_month">352</span><br> tickets last month</div>
-            <div class='col-xs-6'>We wrote approx. <br><span id="lines_this_week">1,400</span><br> lines of code this week</div>
+            <div class='col-xs-6'>We closed <br class="visible-xs"><span id="tickets_last_month">352</span><br class="visible-xs"> tickets last month</div>
+            <div class='col-xs-6'>We wrote approx. <br class="visible-xs"><span id="lines_this_week">1,400</span><br class="visible-xs"> lines of code this week</div>
           </div>
         </header>
 
@@ -68,11 +77,13 @@
               <%= image_tag("Bence_2.jpg") %>
               <p>Bence Erdős</p>
               <h3>ceo</h3>
+              <h4 class="hidden-xs">Having a solid experience in company management and leadership I am capable of understanding IT problems of business focused clients. Finding the right solutions and helping clients to use their software infrastructure effectively is what continuously drives me.</h4>
             </div>
             <div class='profil col-xs-6'>
               <%= image_tag("Attila.jpg") %>
               <p>Attila Juhász</p>
               <h3>cto</h3>
+              <h4 class="hidden-xs">I have been working on web related projects for ten years. I've seen many setups, many apps and I solved countless bugs in enterprise level Rails apps. I love working with new technologies, always searching for the perfect technology, tool, solution.</h4>
             </div>
           </div>
 
@@ -103,9 +114,12 @@
             </object> 
           </video>
           -->
-          <h3>We know that every project is unique. We can either adapt our workflow to fit your environment (code repository, ticketing system, etc.) or we can get you familiar with our tried and tested industry standard tools. We operate our projects in two different modes: building and maintaining.
+          <h3 class="col-sm-6">We know that every project is unique. We can either adapt our workflow to fit your environment (code repository, ticketing system, etc.) or we can get you familiar with our tried and tested industry standard tools. 
           <br>
           <br>
+          We operate our projects in two different modes: building and maintaining.
+          </h3>
+          <h3 class="col-sm-6">
           <span>~/.build</span>
           <br>
           When we build a new project we define clear milestones. We also divide the larger milestones into smaller sprints which helps us and you effectively track the project.
@@ -120,7 +134,7 @@
           <h2>Contact us</h2>
           <p>We are eager to hear about your project!</p>
           
-          <ul>
+          <ul class="col-sm-4">
             <li>
               <h5>email</h5>
               <p><%= mail_to "hello@appmaintainers.com" %></p>
@@ -130,7 +144,8 @@
               <h5>phone</h5>
               <p>+36 20 534 1904</p>
             </li>
-
+          </ul>
+          <ul class="col-sm-4">
             <li>
               <h5>skype</h5>
               <p><%= link_to "Bence Erdős", "skype:bence_erdos" %>,
@@ -141,14 +156,15 @@
               <h5>linkedin</h5>
               <p><%= link_to "appmaintainers", "https://www.linkedin.com/company/app-maintainers-limited", :target => "_blank" %></p>
             </li>
-
+          </ul>
+          <ul class="col-sm-4">
             <li>
               <h5>office</h5>
               <p><%= link_to raw("H-1115 Budapest <br> Bártfai utca 54."), "https://www.google.hu/maps/place/B%C3%A1rtfai+utca+54/@47.464979,19.0290019,17z/data=!3m1!4b1!4m2!3m1!1s0x4741ddbf76f1c81f:0xba4de98c0266d5c8", :target => "_blank" %></p>
             </li>
           </ul>
 
-          <section class='map'>
+          <section class="map col-sm-12">
             <div id="map-canvas"></div>
           </section>
         </section>
