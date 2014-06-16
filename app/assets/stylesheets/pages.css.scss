@@ -599,22 +599,41 @@ h3 {
   }
   .bosses, .employee {
     margin: 0em;
-    img {
-      width: 100%;
-      @media (min-width: 768px) { position: absolute; clip: rect(110px, 500px, 270px, 0px) };
-    }
     .profil {
       padding: 0;
-      @media (min-width: 768px) { margin-top: -7em };
+      .Bence, .Attila {
+        background-size: cover !important;
+        overflow: hidden;
+        width: 100%;
+        min-height: 14em;
+        @media (min-width: 550px) {min-height: 20em };
+        @media (min-width: 1200px) { width: 132% };
+      }
+      .Bence, .Botond {
+        @media (min-width: 1200px) { margin-left: -32% };
+      }
+
+      .Botond, .Soma {
+        background-size: cover !important;
+        overflow: hidden;
+        min-height: 7em;
+        @media (min-width: 550px) { min-height: 12em };
+        @media (min-width: 992px) { float: left; width: 50% };
+        @media (min-width: 1200px) { width: 66% };
+      }
+      .Soma {
+        @media (min-width: 1200px) { margin-right: -32% };
+      }
+
       p {
         color: black;
         font-family: Avenir_medium;
         font-size: 1.6em;
         padding-bottom: inherit;
         margin-bottom: 0em;
-        @media (min-width: 768px) { padding-top: 13em };
         @media (min-width: 1200px) { font-size: 2.2em }; 
       }
+      
       h3 {
         margin: 0em;
         color: grey;
@@ -625,6 +644,30 @@ h3 {
         color: grey;
         padding: 0 1.4em;
         @media (min-width: 1200px) { font-size: 1.7em; padding-left: 1em }; 
+      }
+    }
+  }
+  .bosses {
+    .profil {
+      margin-bottom: 2em;
+    }
+  }
+  .employee {
+    @media (min-width: 992px) and (max-width: 1199px) { border-top: 1px solid grey; border-bottom: 1px solid grey };
+    p {
+      font-size: 1.2em !important;
+      @media (min-width: 768px) { padding-left: 2em };
+      @media (min-width: 992px) { float: left; padding-top: 24%; padding-left: 1em };
+      @media (min-width: 1200px) { float: none; width: initial };
+    }
+    .profil:last-child {
+      p {
+        @media (min-width: 1200px) { float: right };
+      }
+    }
+    .profil {
+      .Botond {
+        @media (min-width: 1200px) { float: right };
       }
     }
   }
