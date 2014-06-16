@@ -16,4 +16,5 @@
 //= require bootstrap.min
 //= require counter
 //= require jquery.scrollTo.min
+//= require jquery.touchSwipe.min
 //= require pages
