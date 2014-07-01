@@ -12,31 +12,41 @@
       </div>
       <div data-role="panel" class="content">
         <header class="text-center">
-          <div class="video">
-            <div class="header_bar">              
-              <a href="javascript:false"; class="visible-xs toggle-nav btn btn-lg btn-success">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </a>
-              <div class="AM">APP<span>MAINTAINERS</span></div>
-              <ul class="hidden-xs">
-                <li><%= link_to "Projects", "#projects" %></li>
-                <li><%= link_to "Our Team", "#team" %></li>
-                <li><%= link_to "How we work", "#workstyle" %></li>
-                <li><%= link_to "Contact us", "#contact" %></li>
-              </ul>
-            </div>
-            <div class="line"></div>
-            <%= image_tag("logo.svg") %>
-            <div class="title">
-              <h1>We maintain & build <br class="visible-lg">Ruby on Rails apps.</h1>
-              <p class="hidden-xs">From a quick hotfix to large-scale web apps we are here to help you with your project.</p>
-              <a href="#"> &#9658; How do we do it?</a>
+          <div class="row vid">
+            <div id="bg">
+              <%= image_tag "1_index.jpg", class: "visible-xs", id: "bgimage" %>
+              <div class="hidden-xs" id="overlay"></div>
+              <video src="assets/video.mp4" class="hidden-xs" id="bg-video" muted autoplay loop ></video>
+              <div class="head">
+                <div class="header_bar">              
+                  <a href="javascript:false"; class="visible-xs toggle-nav btn btn-lg btn-success">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <div class="AM">APP<span>MAINTAINERS</span></div>
+                  <ul class="hidden-xs">
+                    <li><%= link_to "Projects", "#projects" %></li>
+                    <li><%= link_to "Our Team", "#team" %></li>
+                    <li><%= link_to "How we work", "#workstyle" %></li>
+                    <li><%= link_to "Contact us", "#contact" %></li>
+                  </ul>
+                </div>
+                <div class="line"></div>
+                <div class="row">
+                  <%= image_tag "logo.svg", class: "coins col-sm-5 col-md-5" %>
+                  <div class="title col-sm-7 col-md-7">
+                    <h1>We maintain & build <br class="visible-lg">Ruby on Rails apps.</h1>
+                    <p class="hidden-xs">From a quick hotfix to large-scale web apps we are here to help you with your project.</p>
+                    <a href="#"> &#9658; How do we do it?</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          
 
-          <div class="statistic">
+          <div class="row statistic">
             <div class="col-xs-6">We closed <br class="visible-xs"><span id="tickets_last_month">352</span><br class="visible-xs"> tickets last month</div>
             <div class="col-xs-6">We wrote approx. <br class="visible-xs"><span id="lines_this_week">1,400</span><br class="visible-xs"> lines of code this week</div>
             <div class="mask">
@@ -46,6 +56,7 @@
 
         <section class="projects", id="projects">
           <h2>Projects</h2>
+          <p>We delivered a wide range of tasks from whole projects to business critical functions. Here is a short selection of our most interesting works.</p>
             <% @cards.each do |card| %>
               <div class="project", id="card-<%= card.id %>"; style="z-index: <%= card.id %>">
                 <h4><%= card.category.split.map{|cat| "##{cat}"}.join(", ") %></h4>
@@ -105,17 +116,17 @@
               <div class="Bence" style="background: url(<%=image_path('Bence_2.jpg')%>); background-position: center center"></div>
               <p>Bence Erdõs</p>
               <h3>ceo</h3>
-              <h4 class="hidden-xs">Having a solid experience in company management and leadership I am capable of understanding IT problems of business focused clients. Finding the right solutions and helping clients to use their software infrastructure effectively is what continuously drives me.</h4>
+              <h4 class="desc">Having a solid experience in company management and leadership I am capable of understanding IT problems of business focused clients. Finding the right solutions and helping clients to use their software infrastructure effectively is what continuously drives me.</h4>
             </div>
             <div class="profil col-xs-6">
               <div class="Attila" style="background: url(<%=image_path('Attila.jpg')%>); background-position: center center"></div>
               <p>Attila Juhász</p>
               <h3>cto</h3>
-              <h4 class="hidden-xs">I have been working on web related projects for ten years. I've seen many setups, many apps and I solved countless bugs in enterprise level Rails apps. I love working with new technologies, always searching for the perfect technology, tool, solution.</h4>
+              <h4 class="desc">I have been working on web related projects for ten years. I've seen many setups, many apps and I solved countless bugs in enterprise level Rails apps. I love working with new technologies, always searching for the perfect technology, tool, solution.</h4>
             </div>
           </div>
 
-          <div class="row employee">
+          <div class="row employee hidden-xs hidden-sm">
             <div class="profil col-xs-6">
               <div class="Botond" style="background: url(<%=image_path('Boti.jpg')%>); background-position: center center"></div>
               <p>Botond Erdõs</p>
@@ -130,7 +141,17 @@
         <section class="workstyle", id="workstyle">
           <h2>How we work</h2>
           <p>We start every project with a personal discussion with the project stakeholders. We assess the task, define the goals and we create a detailed timing.</p>
-          <%= image_tag("video.jpg") %>
+          <%= image_tag "video.jpg", class: "visible-xs" %>
+          <div class="row video_2 hidden-xs">
+            <video controls>
+              <source src="assets/mov_bbb.mp4" type="video/mp4">
+              <source src="assets/mov_bbb.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+            </video>
+            <div class="play">
+              <a href="#"> &#9658; Play </a>
+            </div>
+          </div>
           <!--
           <video width="320" height="240" controls>
             <source src="movie.mp4" type="video/mp4">

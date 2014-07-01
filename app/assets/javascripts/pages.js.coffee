@@ -83,13 +83,19 @@ $ ->
     ), 500
     return
 
-  $(".video img").click ->
-    logo = $(".video img")
+  $(".coins").click ->
+    logo = $(".coins")
     logo.addClass("animated flip")
     setTimeout (->
       logo.removeClass("animated flip")
       return
     ), 1000
+    return
+
+  $(".profil").click ->
+    prof = $(".profil h4")
+    prof.removeClass("desc")
+    #prof.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', prof.addClass("desc"))
     return
 
   $(".menu li a").on "click", (e) ->
@@ -99,7 +105,7 @@ $ ->
 
   $(".header_bar li a").on "click", (e) ->
     e.preventDefault()
-    setTimeout "$.scrollTo( $(\"" + $(this).attr("href") + "\"), 500 )", 500
+    setTimeout "$.scrollTo( $(\"" + $(this).attr("href") + "\"), 500 )"
     return
 
   return
