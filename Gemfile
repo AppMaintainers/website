@@ -52,3 +52,4 @@ gem 'rails_12factor', group: :production
 gem 'rails_admin'
 gem 'devise'
 gem 'factory_girl_rails'
+gem 'haml-rails'

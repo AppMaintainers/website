@@ -1,0 +1,183 @@
+.menu{ data: { role: "panel" } }
+  = image_tag("bigapplogo.svg")
+  .fixed
+    %ul
+      %li= link_to "Projects", "#projects"
+      %li= link_to "Our Team", "#team"
+      %li= link_to "How we work", "#workstyle"
+      %li= link_to "Contact", "#contact"
+    %p
+      Call us:
+      %br +36 20 534 1904
+
+.content{ data: { role: "panel" } }
+  %header.text-center
+    .row.vid
+      #bg
+        = image_tag "1_index.jpg", class: "visible-xs", id: "bgimage"
+        #overlay.hidden-xs
+        %video#bg-video.hidden-xs{ autoplay: "", loop: "", muted: "", src: "assets/video.mp4" }
+        .head
+          .header_bar
+            .AM
+              APP
+              %span MAINTAINERS
+            %a.visible-xs.toggle-nav{ href: "javascript:void(0);" }
+              .icon-bar
+              .icon-bar
+              .icon-bar
+            %ul.hidden-xs
+              %li= link_to "Projects", "#projects"
+              %li= link_to "Our Team", "#team"
+              %li= link_to "How we work", "#workstyle"
+              %li= link_to "Contact us", "#contact"
+          .line
+          .row
+            = image_tag "logo.svg", class: "coins col-sm-5 col-md-5"
+            .col-sm-7.col-md-7.title
+              %h1
+                We maintain & build
+                %br.visible-lg Ruby on Rails apps.
+              %p.hidden-xs From a quick hotfix to large-scale web apps we are here to help you with your project.
+              %a{ href: "javascript:void(0);" } ► How do we do it?
+    .row.statistic
+      .col-xs-6
+        We closed
+        %br.visible-xs
+          %span#tickets_last_month 352
+          %br.visible-xs tickets last month
+      .col-xs-6
+        We wrote approx.
+        %br.visible-xs
+          %span#lines_this_week 1,400
+          %br.visible-xs lines of code this week
+      .mask
+
+  %section#projects
+    %h2 Projects
+    %p We delivered a wide range of tasks from whole projects to business critical functions. Here is a short selection of our most interesting works.
+    - @cards.each do |card|
+      .project{ id: "card-#{card.id}", style: "z-index: #{card.id}" }
+        %h4= card.category.split.map{|cat| "##{cat}"}.join(", ")
+        %h3= card.project
+        %p= card.solution
+        .row
+          .col-xs-5.title Tools
+          .col-xs-offset-2.col-xs-5.title Difficulty
+          .col-xs-5.tool= card.tech.to_s.split.join(", ")
+          .col-xs-offset-2.col-xs-5.circles
+            - (1..5).each do |circle|
+              %div{class: card.difficulty >= circle ? "circle_full" : "circle_empty"}
+    .button
+      %a{ href: "javascript:void(0);" } more projects
+    - @cards.each do |card|
+      .one-project.hidden-xs{ id: "one-#{card.id}" }
+        %table
+          %tr
+            %td.back-button.sign
+              = link_to "javascript:void(0);" do
+                %span <
+                %span.back.visible-lg back
+            %td.title
+              %h3= card.project
+            %td.category
+              %h4= card.category.split.map{|cat| "##{cat}"}.join(", ")
+        %table
+          %tr
+            %td.empty
+            %td.solution
+              %p= card.solution
+            %td.else
+              .tit Tools
+              .tool= card.tech.to_s.split.join(", ")
+              .tit Difficulty
+              .circles
+                - (1..5).each do |circle|
+                  %div{class: card.difficulty >= circle ? "circle_full" : "circle_empty"}
+
+  %section#team
+    %h2 Our Team
+    %p We believe that good communication is just as important as coding. Which means that you will be in direct contact with our lead developers.
+    .row.bosses
+      .col-xs-6.profil
+        .Bence{ style: "background: url(#{image_path('Bence_2.jpg')}); background-position: center center" }
+        %p Bence Erdõs
+        %h3 ceo
+        %h4.desc Having a solid experience in company management and leadership I am capable of understanding IT problems of business focused clients. Finding the right solutions and helping clients to use their software infrastructure effectively is what continuously drives me.
+      .col-xs-6.profil
+        .Attila{ style: "background: url(#{image_path('Attila.jpg')}); background-position: center center;" }
+        %p Attila Juhász
+        %h3 cto
+        %h4.desc I have been working on web related projects for ten years. I've seen many setups, many apps and I solved countless bugs in enterprise level Rails apps. I love working with new technologies, always searching for the perfect technology, tool, solution.
+    .row.employee.hidden-xs.hidden-sm
+      .col-xs-6.profil
+        .Botond{ style: "background: url(#{image_path('Boti.jpg')}); background-position: center center" }
+        %p Botond Erdõs
+      .col-xs-6.profil
+        .Soma{ style: "background: url(#{image_path('Soma.jpg')}); background-position: center center" }
+        %p Soma Stágel
+
+  %section#workstyle
+    %h2 How we work
+    %p We start every project with a personal discussion with the project stakeholders. We assess the task, define the goals and we create a detailed timing.
+    = image_tag "video.jpg", class: "visible-xs"
+    .row.video_2.hidden-xs
+      %video{ controls: "" }
+        %source{ src: "assets/mov_bbb.mp4", type: "video/mp4" }
+          %source{ src: "assets/mov_bbb.ogg", type: "video/ogg" }
+            Your browser does not support the video tag.
+      .play
+        %a{ href: "javascript:void(0);" } ► Play
+    .row
+      .col-sm-6
+        %h3
+          We know that every project is unique. We can either adapt our workflow to fit your environment (code repository, ticketing system, etc.) or we can get you familiar with our tried and tested industry standard tools.
+          %br
+            %br
+              We operate our projects in two different modes: building and maintaining.
+      .col-sm-6
+        %h3
+          %span ~/.build
+          %br
+            When we build a new project we define clear milestones. We also divide the larger milestones into smaller sprints which helps us and you effectively track the project.
+            %br
+              %br
+                %span ~/.maintain
+                %br
+                  In maintenance mode we continuously monitor your project and act instantly if needed.
+
+  %section#contact
+    %h2 Contact us
+    %p We are eager to hear about your project!
+    .row
+      .col-sm-4
+        %ul.email
+          %li
+            %h5 email
+            %p
+              = mail_to "hello@appmaintainers.com"
+              %br
+                %br.hidden-xs/
+          %li
+            %h5 phone
+            %p +36 20 534 1904
+      .col-sm-4
+        %ul.skype
+          %li
+            %h5 skype
+            %p
+              = link_to "Bence Erdõs", "skype:bence_erdos"
+              ,
+              %br.hidden-xs
+                = link_to "Attila Juhász", "skype:goraffe"
+          %li
+            %h5 linkedin
+            %p= link_to "appmaintainers", "https://www.linkedin.com/company/app-maintainers-limited", target: "_blank"
+      .col-sm-4
+        %ul.office
+          %li
+            %h5 office
+            %p= link_to raw("H-1115 Budapest <br> Bártfai utca 54."), "https://www.google.hu/maps/place/B%C3%A1rtfai+utca+54/@47.464979,19.0290019,17z/data=!3m1!4b1!4m2!3m1!1s0x4741ddbf76f1c81f:0xba4de98c0266d5c8", target: "_blank"
+      
+  %section.map
+    #map-canvas

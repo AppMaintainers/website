@@ -66,6 +66,7 @@ $ ->
   # project
   $(".project").click ->
     if window.innerWidth > 767
+      console.log "bla"
       card_id = $(@).attr("id").split("-")[1]
       $("#one-#{card_id}").addClass("animated bounceInRight")
     else

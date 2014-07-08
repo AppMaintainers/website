@@ -1,0 +1,45 @@
+@media (min-width: 768px) { 
+  .header_bar {
+    ul {
+      margin-right: 0.7em;
+      a {
+        font-size: 1.2em;
+      }
+    }
+  }
+  .coins {
+    padding: 5em;
+  }
+  .title {
+    h1 {
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+@media (min-width: 992px) {
+  .header_bar {
+    .AM {
+      font-size: 2em; 
+      letter-spacing: 0.05em;
+    }
+    ul {
+      margin-top: 0.5em;
+      a {
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+  .line {
+    margin-top: 3em; 
+    height: 0.4em;
+  }
+  .title {
+    padding-right: 10%;
+    h1 {
+      font-size: 4em;
+    }
+    p {
+      font-size: 2em;
+    }
+  }
+}
