@@ -1,19 +1,14 @@
-@import "fonts";
-@import "media";
-
 html {
   margin: 0 auto;
 }
 body {
   font-family: Prelo_light;
 }
-
 .wrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
-
 .canvas {
   width: 100%;
   height: 100%;
@@ -40,7 +35,6 @@ body {
   -webkit-transform: translate3d(-300px, 0, 0);
   transform: translate3d(-300px, 0, 0);
 }
-
 .menu {
   width: 300px;
   height: 100%;
@@ -48,11 +42,9 @@ body {
   top: 0;
   right: -300px;
   background: #E22D28;
-
   -moz-box-shadow:    inset 15px 0 50px -15px #000000;
   -webkit-box-shadow: inset 15px 0 50px -15px #000000;
   box-shadow:         inset 15px 0 50px -15px #000000;
-
   a {
     position: relative;
   }
@@ -81,109 +73,97 @@ body {
     }
   }
 }
-
 header {
   .row {
     margin: 0;
   }
   .vid {
     color: white;
-    #bg {
-      position: relative;
-      #bgimage {
-        width: 100%;
-        z-index: -1000;
-        opacity: 0.3;
-        padding: 0;
+  }
+  #bg {
+    position: relative;
+    #bgimage {
+      width: 100%;
+      z-index: -1000;
+      opacity: 0.3;
+      padding: 0;
+    }
+    #overlay {
+      background: url('pattern.png');
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    video {
+      margin-bottom: -6px;
+      width: 100%;
+      z-index: -1000;
+    }
+  }
+  .head {
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+  }
+  .header_bar {
+    padding-top: 1.5em;
+    .AM {
+      float: left;
+      margin-left: 1em;
+      font-size: 1.6em;
+      text-align: left;
+      span {
+        font-family: Prelo_bold;
       }
-      #overlay {
-        background: url('pattern.png');
-        position: absolute;
-        width: 100%;
-        height: 100%;
+    }
+    .toggle-nav {
+      float: right;
+      margin-right: 2em;
+      color: white;
+      font-size: 0.6em;
+      padding: 0;
+      .icon-bar {
+        width: 3em;
+        height: 0.4em;
+        background-color: white;
+        margin: 0.5em;
       }
-      video {
-        width: 100%;
-        z-index: -1000;
-      }
-      .head {
-        position: absolute; 
-        top: 0; 
-        bottom: 0; 
-        left: 0; 
-        right: 0;
-        .header_bar {
-          padding-top: 1.5em;
-          .AM {
-            float: left;
-            margin-left: 1em;
-            font-size: 1.6em;
-            text-align: left;
-            padding-bottom: 0.2em;
-            span {
-              font-family: Prelo_bold;
-            }
-          }
-          .toggle-nav {
-            float: right;
-            margin-right: 2em;
-            color: white;
-            font-size: 0.6em;
-            padding: 0;
-            .icon-bar {
-              width: 3em;
-              height: 0.4em;
-              background-color: white;
-              margin: 0.5em;
-            }
-          }
-          ul {
-            list-style: none;
-            float: right;
-            margin-right: 2em;
-            li {
-              float: left;
-              @media (min-width: 1199px) { padding-left: 3em };
-              a {
-                border: none;
-              }
-            }
-          }
-        }
-        .line {
-          margin: 2.6em 1.6em 1em 1.6em;
-          height: 0.2em;
-          background-color: rgba(255, 255, 255, 0.2);
-        }
-        .row {
-          .coins {
-            text-align: center;
-            padding-top: 2em;
-            @media (max-width: 767px) { width: 12em };
-            max-width: 40em;
-          }
-          .title {
-            @media (min-width: 768px) { padding-right: 2em; text-align: left; padding-top: 2em };
-            @media (min-width: 1200px) { padding-top: 8em; padding-bottom: 2em };
-            h1 {
-              font-family: Prelo_book;
-              font-size: 2.4em;
-              @media (max-width: 767px) { margin-bottom: 1.2em; text-align: center };
-            }
-            p {
-              line-height: 1em;
-              font-size: 1.4em;
-              margin-bottom: 2em;
-            }
-            a, a:hover {
-              @media (min-width: 1200px) { font-size: 2em };
-            }
-          }
+    }
+    ul {
+      list-style: none;
+      float: right;
+      margin-right: 2em;
+      li {
+        float: left;
+        a {
+          border: none;
         }
       }
     }
   }
-
+  .line {
+    margin: 2.6em 1.6em 1em 1.6em;
+    height: 0.2em;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .coins {
+    text-align: center;
+    padding-top: 2em;
+    max-width: 40em;
+  }
+  .title {
+    h1 {
+      font-family: Prelo_book;
+      font-size: 2.4em;
+    }
+    p {
+      line-height: 1em;
+      font-size: 1.4em;
+      margin-bottom: 2em;
+    }
+  }
   a, a:hover {
     font-family: Prelo_book;
     color: white;
@@ -193,17 +173,13 @@ header {
     border: 0.05em solid white;
     border-radius: 0.2em;
   }
-
-  /*.statistic {
+  .statistic {
     margin: 0em;
     background: asset-url('fallers.svg', image) center;
     background-size: cover;
     height: 12em;
-    @media (min-width: 768px) { background: asset-url('fallers.svg', image) center; height: 6em };
     color: black;
     padding-top: 1.5em;
-    @media (min-width: 992px) { font-size: 1.6em; height: 10em ; background-size: 38% };
-    @media (min-width: 1200px) { font-size: 1.8em };
     p {
       margin: 0em;
     }
@@ -211,8 +187,6 @@ header {
       font-family: Prelo_bold;
       color: #E22D28;
       font-size: 3em;
-      @media (min-width: 992px) { font-size: 2.2em };
-      @media (min-width: 1200px) { font-size: 2.4em };
       line-height: 1em;
       padding: 0 0.2em;
       vertical-align: middle;
@@ -221,7 +195,6 @@ header {
   .mask {
     height: inherit;
     margin-top: -1.5em;
-    
     background: rgba(255,255,255,0);
     background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 45%, rgba(255,255,255,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(45%, rgba(255,255,255,0.45)), color-stop(100%, rgba(255,255,255,1)));
@@ -230,77 +203,58 @@ header {
     background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 45%, rgba(255,255,255,1) 100%);
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 45%, rgba(255,255,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
-  }*/
+  }
 }
-/*
 h2 {
   font-family: Avenir_medium;
   color: black;
   font-size: 3em;
   padding-top: 0.5em;
-  @media (min-width: 1200px) { font-size: 4em };
 }
-
 h3 {
   color: grey;
   font-size: 1.2em;
 }
-
 #projects {
-  @media (max-width: 767px) { text-align: center };
-  @media (min-width: 1200px) { margin-left: 12%; margin-right: 12% };
-  margin: 1em 0;
   background-size: cover;
   h2 {
     padding-left: 0.3em;
     font-family: Avenir_medium;
-    margin-top: 0em;
   }
   p {
     color: grey;
     font-size: 1.3em;
-    @media (min-width: 768px) { width: 75% };
-    @media (min-width: 1200px) { font-size: 1.7em; padding-left: 0.8em };
     padding: 0.3em 1em 1.2em 1em;
   }
   a, a:hover {
     color: grey;
     font-size: 3em;
-    @media (min-width: 1200px) { font-size: 4em };
     text-decoration: none;
     border: 0.05em solid grey;
     border-radius: 0.2em;
     padding: 0.7em;
   }
   .project {
-    @media (min-width: 768px) { width: 33.33%; float: left; height: 10em };
-    padding-left: 2em;
-    padding-right: 2em;
+    padding: 0em 2em;
     margin:0;
-    transparent: .9;
+    transparent: 0.9;
     max-height: 10em;
-    @media (min-width: 1200px) { height: 14em; max-height: 14em };
     overflow: hidden;
     transition: max-height 1s, margin 1s, padding 1s, box-shadow 1s;
     color: white;
     h4 {
       padding-top: 1em;
       margin-top: 0em;
-      @media (min-width: 768px) { font-size: 1em; };
-      @media (min-width: 1200px) { font-size: 1.4em };
       color: rgba(255, 255, 255, 0.5);
     }
-    h3{
+    h3 {
       font-family: Avenir_medium;
-      @media (max-width: 767px) { padding-bottom: 0.8em };
       padding-bottom: 5em;
       margin-top: 0.6em;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
       font-size: 1.6em;
-      @media (min-width: 768px) and (max-width: 1199px) { font-size: 1.2em; };
       color: white;
     }
-    p{
+    p {
       color: white;
       font-family: Prelo_light;
       margin-top: 0.8em;
@@ -313,48 +267,31 @@ h3 {
     position: relative;
     max-height: 100em;
     margin: 0;
+    h3 {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
   }
-
-  .project.slide{
-    position: relative;
-    max-height: 20em;
-    margin: 0;
-  }
-
-  .arrow {
-    border-top: 20px solid #2f2f2f;
-    border-left: 200px solid transparent;
-    border-right: 200px solid transparent;
-    margin-left: -2em;
-    margin-right: -2em;
-    background-color: rgba(255, 255, 255, 0);
-  }
-
-  .r {
+  .block {
     text-align: left;
     font-size: 1.4em;
     font-family: Prelo_book;
     margin: 0em;
-    div{
+    div {
       font-family: Avenir_roman;
       padding-left: 0em;
     }
     div:nth-child(3) {
       font-family: Prelo_light;
     }
-
     .title {
       border-bottom: 1px solid rgba(255, 255, 255, 0.6);
     }
-
     .tool {
       padding-bottom: 1em;
     }
-
     .circles {
       padding-top: 0.1em;
     }
-
     .circle_full, .circle_empty {
       margin: 0.15em;
       float: left;
@@ -363,70 +300,49 @@ h3 {
       border: 0.1em solid white;
       border-radius: 50%; 
     }
-
     .circle_full {  
       background-color: white;
     }
   }
-  /* green 
+  /* green */ 
   .project:nth-child(6n+1) {  
     background-color: rgba(185, 233, 134, 0.9);
-    @media (max-width: 767px) { display: none };
   }
-  /* orange 
+  /* orange */
   .project:nth-child(6n+2) {  
     background-color: rgba(255, 161, 7, 0.9);
   }
-  /* turquoise 
+  /* turquoise */
   .project:nth-child(6n+3) {  
     background-color: rgba(79, 228, 196, 0.9);
   }
-  /* burgundy 
+  /* burgundy */
   .project:nth-child(6n+4) {  
     background-color: rgba(217, 107, 110, 0.9);
   }
-  /* blue 
+  /* blue */
   .project:nth-child(6n+5) {  
     background-color: rgba(123, 196, 213, 0.9);
   }
-  /* purple 
+  /* purple */
   .project:nth-child(6n+6) { 
     background-color: rgba(203, 135, 210, 0.9);
-    @media (max-width: 767px) { display: none };
   }
-
   .button {
-    @media (min-width: 768px) { margin-top: -50em; padding-right: 2em; float: right };
-    @media (min-width: 1200px) { margin-top: -70em };
     margin-top: 5em;
     font-family: Prelo_book;
     font-size: 0.5em;
     padding: 0.6em;
-    a {
-      @media (min-width: 768px) { padding: 0.3em 0.7em };
-    }
   }
-  .project-header {
-    padding: 0em 2em;
-  }
-  .project-footer {
-    padding: 2em;
-  }
-
   .one-project {
-    @media (max-width: 767px) { display: none };
     display: none;
     width: 100%;
     height: 20em;
-    @media (min-width: 1200px) { height: 28em };
     position: absolute;
     background-color: white;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     color: rgba(73, 73, 73, 1);
-    .line {
-      height: 80px;
-    }
     .sign {
       width: 12%;
       background-color: rgba(73, 73, 73, 1);
@@ -437,7 +353,6 @@ h3 {
         border: none;
         padding: 0em 0.4em;
         line-height: 1.2em;
-        margin-left: -0.2em;
       }
       .back {
         font-size: 0.5em;
@@ -447,41 +362,30 @@ h3 {
         float: left;
       }
     }
-
     &.animated.bounceInRight {
       display: block;
-      @media (min-width: 1200px) { margin-left: -12% };
-    }
-
-    .data {
-      padding:0;
     }
     h4 {
       padding: 1.25em 0 1.25em 2em;
       margin-top: 0em;
       font-size: 1em;
-      @media (min-width: 1200px) { font-size: 1.6em };
       color: rgba(255, 255, 255, 0.5);
     }
-    h3{
+    h3 {
       font-family: Avenir_medium;
       padding: 0.5em;
       margin-top:0;
       font-size: 1.2em;
-      @media (min-width: 1200px) { font-size: 2em };
       color: white;
       padding: 0.4em 1em;
     }
-
-    p{
+    p {
       font-family: Prelo_light;
       margin-top: 0.8em;
       text-align: left;
       font-size: 1.1em;
       width: 100%;
-      @media (min-width: 1200px) { font-size: 1.6em };
     }
-
     .title {
       width: 58%;
       background-color: rgba(255, 161, 7, 0.9);
@@ -499,13 +403,11 @@ h3 {
     .else {
       width: 30%;
       color: rgba(73, 73, 73, 0.6);
-      padding-left: 2em;
-      padding-right: 8em;
+      padding: 0em 8em 0em 2em;
       text-align: left;
       font-size: 1em;
       font-family: Prelo_book;
       margin-top: 0.8em;
-      @media (min-width: 1200px) { font-size: 1.6em };
       div{
         font-family: Avenir_roman;
         padding-left: 0em;
@@ -513,21 +415,17 @@ h3 {
       div:nth-child(2) {
         font-family: Prelo_light;
       }
-
       .tit {
         padding-bottom: 0.2em;
         border-bottom: 1px solid rgba(73, 73, 73, 0.2);
       }
-      
       .tool {
         padding-top: 0.2em;
         padding-bottom: 1em;
       }
-      
       .circles {
         padding-top: 0.3em;
       }
-
       .circle_full, .circle_empty {
         margin: 0.2em;
         float: left;
@@ -536,27 +434,20 @@ h3 {
         border: 0.1em solid rgba(73, 73, 73, 0.2);
         border-radius: 50%; 
       }
-
       .circle_full {  
         background-color: rgba(73, 73, 73, 1);
       }
     }
   }
 }
-
 #team {
-  @media (max-width: 767px) { text-align: center };
-  @media (min-width: 996px) { margin-top: 35% };
-  @media (min-width: 1200px) { margin-left: 12%; margin-right: 12% };
   h2 {
     padding-left: 0.3em;
     font-family: Avenir_medium;
-    margin-top: 3em;
   }
   p {
     color: grey;
     font-size: 1.3em;
-    @media (min-width: 1200px) { font-size: 1.7em; padding-left: 0.8em; width: 75% };
     padding: 0.3em 1em 1.2em 1em;
   }
   .bosses, .employee {
@@ -568,48 +459,28 @@ h3 {
         overflow: hidden;
         width: 100%;
         min-height: 14em;
-        @media (min-width: 550px) {min-height: 20em };
-        @media (min-width: 1200px) { width: 132% };
       }
-      .Bence, .Botond {
-        @media (min-width: 1200px) { margin-left: -32% };
-      }
-
       .Botond, .Soma {
         background-size: cover !important;
         overflow: hidden;
         min-height: 7em;
-        @media (min-width: 550px) { min-height: 12em };
-        @media (min-width: 992px) { float: left; width: 50% };
-        @media (min-width: 1200px) { width: 66% };
       }
-      .Soma {
-        @media (min-width: 1200px) { margin-right: -32% };
-      }
-
       p {
         color: black;
         font-family: Avenir_medium;
         font-size: 1.6em;
         padding-bottom: inherit;
         margin-bottom: 0em;
-        @media (min-width: 1200px) { font-size: 2.2em }; 
       }
-      
       h3 {
         margin: 0em;
         color: grey;
         font-family: Prelo_light;
-        padding: 0 1.4em;
+        padding: 0em 1.4em;
       }
       h4 {
         color: grey;
-        padding: 0 1.4em;
-        @media (max-width: 767px) { text-align: left; padding: 0 0.4em };
-        @media (min-width: 1200px) { font-size: 1.7em; padding-left: 1em }; 
-      }
-      .desc {
-        @media (max-width: 767px) { display: none };
+        padding: 0em 1.4em;
       }
     }
   }
@@ -619,39 +490,20 @@ h3 {
     }
   }
   .employee {
-    @media (min-width: 992px) and (max-width: 1199px) { border-top: 1px solid grey; border-bottom: 1px solid grey };
     p {
       font-size: 1.2em !important;
-      @media (min-width: 768px) { padding-left: 2em };
-      @media (min-width: 992px) { float: left; padding-top: 24%; padding-left: 1em };
-      @media (min-width: 1200px) { float: none; width: initial };
-    }
-    .profil:last-child {
-      p {
-        @media (min-width: 1200px) { float: right };
-      }
-    }
-    .profil {
-      .Botond {
-        @media (min-width: 1200px) { float: right };
-      }
     }
   }
 }
-
 #workstyle {
-  @media (max-width: 767px) { text-align: center };
-  @media (min-width: 1200px) { margin-left: 12%; margin-right: 12% };
   h2 {
     padding-left: 0.3em;
     font-family: Avenir_medium;
-    margin-top: 3em;
   }
   p {
     color: grey;
     font-size: 1.3em;
     padding: 0.3em 1em 1.2em 1em;
-    @media (min-width: 1200px) { font-size: 1.7em; padding-left: 0.8em; width: 75% };
   }
   h3 {
     margin: 0em;
@@ -659,7 +511,6 @@ h3 {
     text-align: left;
     color: grey;
     font-size: 1.3em;
-    @media (min-width: 1200px) { font-size: 1.7em };
     padding: 0.3em 1em 1.2em 1em;
     span {
       font-family: Avenir_medium;
@@ -668,7 +519,6 @@ h3 {
   img {
     width: 100%;
     margin-bottom: 3em;
-    @media (min-width: 1200px) { width: 140%; margin-left: -16% };
   }
   .video_2 {
     position: relative;
@@ -676,7 +526,6 @@ h3 {
       width: 100%;
       height: 100%;
       margin-bottom: 3em;
-      @media (min-width: 1200px) { width: 140%; margin-left: -16% };
     }
     .play {
       font-family: Prelo_book;
@@ -690,7 +539,6 @@ h3 {
         padding: 0.3em 0.7em;
         color: white;
         font-size: 3em;
-        @media (min-width: 1200px) { font-size: 5em };
         text-decoration: none;
         border: 0.05em solid white;
         border-radius: 0.2em;
@@ -699,38 +547,28 @@ h3 {
     }
   }
 }
-
 #contact {
-  padding: inherit;
-  @media (max-width: 767px) { text-align: center };
-  @media (min-width: 1200px) { margin-left: 12%; margin-right: 12% };
   h2 {
     padding-left: 0.3em;
-    margin-top: 2em;
   }
   p {
     color: grey;
-    font-size:1.3em;
-    @media (min-width: 1200px) { font-size: 1.7em };
+    font-size: 1.3em;
     padding: 0.3em 1em 1.2em 1em;
   }
-  ul{
-    padding-left:0em;
+  ul {
+    padding-left: 0em;
     li {
       color: black;
       list-style: none;
-      padding-top:0em;
-
       h5 {
         padding: 0 1em;
         color: #818185;
         font-size: 1.3em;
-        @media (min-width: 1200px) { font-size: 1.7em };
       }
       p {
         color: black;
         font-size: 1.3em;
-        @media (min-width: 1200px) { font-size: 1.6em };
         font-family: Prelo_bold;
         a, a:hover {
           color: black;
@@ -739,33 +577,13 @@ h3 {
       }
     }
   }
-  @media (min-width: 768px) {
-    .email {
-      border-right: 1px solid rgba(73, 73, 73, 0.2);
-      height: 14em;
-    }
-    .skype {
-      border-right: 1px solid rgba(73, 73, 73, 0.2);
-      height: 14em;
-      padding-left: 2.4em;
-    }
-    .office {
-      height: 14em;
-      padding-left: 2.4em;
-    }
-  }
-  @media (min-width: 1200px) { 
-    .email { height: 18em };
-    .skype { height: 18em; padding-left: 6em };
-    .office { height: 18em; padding-left: 6em };
-  };
 }
-
 .map, #map-canvas {
   height: 15.8em;
   margin-bottom: -2em;
   overflow: hidden;
   padding: 0em;
-  @media (min-width: 1200px) { width: 140%; margin-left: -16%; height: 35em; padding-top: 3em };
 }
-*/
+
+@import "fonts";
+@import "media";

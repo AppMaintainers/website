@@ -12,7 +12,7 @@
 
 .content{ data: { role: "panel" } }
   %header.text-center
-    .row.vid
+    .vid
       #bg
         = image_tag "1_index.jpg", class: "visible-xs", id: "bgimage"
         #overlay.hidden-xs
@@ -33,8 +33,8 @@
               %li= link_to "Contact us", "#contact"
           .line
           .row
-            = image_tag "logo.svg", class: "coins col-sm-5 col-md-5"
-            .col-sm-7.col-md-7.title
+            = image_tag "logo.svg", class: "coins col-sm-5"
+            .col-sm-7.col-lg-6.title
               %h1
                 We maintain & build
                 %br.visible-lg Ruby on Rails apps.
@@ -61,7 +61,7 @@
         %h4= card.category.split.map{|cat| "##{cat}"}.join(", ")
         %h3= card.project
         %p= card.solution
-        .row
+        .row.block.visible-xs
           .col-xs-5.title Tools
           .col-xs-offset-2.col-xs-5.title Difficulty
           .col-xs-5.tool= card.tech.to_s.split.join(", ")
@@ -141,10 +141,10 @@
           %br
             When we build a new project we define clear milestones. We also divide the larger milestones into smaller sprints which helps us and you effectively track the project.
             %br
-              %br
-                %span ~/.maintain
-                %br
-                  In maintenance mode we continuously monitor your project and act instantly if needed.
+            %br
+            %span ~/.maintain
+            %br
+            In maintenance mode we continuously monitor your project and act instantly if needed.
 
   %section#contact
     %h2 Contact us
@@ -157,7 +157,7 @@
             %p
               = mail_to "hello@appmaintainers.com"
               %br
-                %br.hidden-xs/
+              %br.hidden-xs/
           %li
             %h5 phone
             %p +36 20 534 1904

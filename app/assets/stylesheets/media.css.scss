@@ -1,45 +1,325 @@
-@media (min-width: 768px) { 
-  .header_bar {
-    ul {
-      margin-right: 0.7em;
-      a {
-        font-size: 1.2em;
+@media (min-width: 550px) {
+  #team {
+    .bosses, .employee {
+      .profil {
+        .Bence, .Attila {
+          min-height: 20em;
+        }
+        .Botond, .Soma {
+          min-height: 12em;
+        }
       }
-    }
-  }
-  .coins {
-    padding: 5em;
-  }
-  .title {
-    h1 {
-      text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
     }
   }
 }
-@media (min-width: 992px) {
-  .header_bar {
-    .AM {
-      font-size: 2em; 
-      letter-spacing: 0.05em;
+
+@media (max-width: 767px) { 
+  header {
+    .coins {
+      width: 12em;
     }
-    ul {
-      margin-top: 0.5em;
-      a {
-        letter-spacing: 0.05em;
+    .title {
+      h1 {
+        margin-bottom: 1.2em; 
+        text-align: center;
       }
     }
   }
-  .line {
-    margin-top: 3em; 
-    height: 0.4em;
+  #projects, #team, #workstyle, #contact {
+    text-align: center;
   }
-  .title {
-    padding-right: 10%;
-    h1 {
+  #projects {
+    .project {
+      h3 {
+        padding-bottom: 0.8em;
+      }
+    }
+    .project:nth-child(6n+1) {  
+      display: none;
+    }
+    .project:nth-child(6n+6) { 
+      display: none;
+    }
+  }
+  #team {
+    .bosses {
+      .profil {
+        h4 {
+          text-align: left; 
+          padding: 0 0.4em;
+        }
+        .desc {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) { 
+  header {
+    .header_bar {
+      ul {
+        margin-right: 0.7em;
+      }
+    }
+    .coins {
+      padding: 5em;
+    }
+    .title { 
+      text-align: left;
+      h1 {
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+        text-align: left;
+      }
+    }
+    .statistic {
+      background: asset-url('fallers.svg', image) center; 
+      height: 6em;
+    }
+  }
+  #projects {
+    p {
+      width: 75%;
+    }
+    .project {
+      width: 33.33%; 
+      float: left; 
+      height: 10em;
+      h4 {
+        font-size: 1em;
+      }
+    }
+    .button {
+      margin-top: -50em; 
+      padding-right: 2em; 
+      float: right;
+      a {
+        padding: 0.3em 0.7em;
+      }
+    }
+  }
+  #contact {
+    .email, .skype, .office { 
+      height: 14em; 
+    }
+    .email {
+      border-right: 1px solid rgba(73, 73, 73, 0.2);
+    }
+    .skype {
+      border-right: 1px solid rgba(73, 73, 73, 0.2);
+      padding-left: 2.4em;
+    }
+    .office {
+      padding-left: 2.4em;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    .header_bar {
+      .AM {
+        font-size: 2em; 
+        letter-spacing: 0.05em;
+      }
+      ul {
+        margin-top: 0.5em;
+        a {
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+    .line {
+      margin-top: 3em; 
+      height: 0.4em;
+    }
+    .title {
+      h1 {
+        font-size: 4em;
+      }
+      p {
+        font-size: 2em;
+      }
+    }
+    .statistic {
+      font-size: 1.6em; 
+      height: 10em ; 
+      background-size: 38%;
+      span {
+        font-size: 2.2em;
+      }
+    }
+  }
+  #team {
+    .bosses, .employee {
+      .profil {
+        .Botond, .Soma {
+          float: left; 
+          width: 50%;
+        }
+      }
+    }
+    .employee {
+      background-color: rgba(73, 73, 73, 0.2);
+      p {
+        float: left; 
+        padding-top: 24%; 
+        padding-left: 1em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    .coins {
+      margin: 3em 2em 3em 4em;
+    }
+    .title {
+      margin-top: 8em;
+    }
+  }
+  #projects {
+    margin-left: 12%; 
+    margin-right: 12%;
+    p {
+      font-size: 1.7em; 
+      padding-left: 0.8em;
+    }
+    a, a:hover {
       font-size: 4em;
     }
-    p {
-      font-size: 2em;
+    .project {
+      height: 14em; 
+      max-height: 14em;
+      h4 {
+        font-size: 1.4em;
+      }
     }
+    .button {
+      margin-top: -70em;
+    }
+    .one-project {
+      height: 28em;
+      &.animated.bounceInRight {
+        margin-left: -12%;
+      }
+      h4 {
+        font-size: 1.6em;
+      }
+      h3{
+        font-size: 2em;
+      }
+      p{
+        font-size: 1.6em;
+      }
+      .else {
+        font-size: 1.6em;
+      }
+    }
+  }
+  #team {
+    margin-left: 12%; 
+    margin-right: 12%;
+    p {
+      font-size: 1.7em; 
+      padding-left: 0.8em; 
+      width: 75%;
+    }
+    .bosses, .employee {
+      .profil {
+        .Bence, .Attila {
+          width: 132%;
+        }
+        .Bence, .Botond {
+          margin-left: -32%;
+        }
+        .Botond, .Soma {
+          width: 66%;
+        }
+        .Soma {
+          margin-right: -32%;
+        }
+        p {
+          font-size: 2.2em; 
+        }
+        h4 {
+          font-size: 1.7em; 
+          padding-left: 1em; 
+        }
+      }
+    }
+    .employee {
+      background-color: white;
+      p {
+        float: none; 
+        width: initial;
+      }
+      .profil:last-child {
+        p {
+          float: right;
+        }
+      }
+      .profil {
+        .Botond {
+          float: right;
+        }
+      }
+    }
+  }
+  #workstyle {
+    margin-left: 12%; 
+    margin-right: 12%;
+    p {
+      font-size: 1.7em; 
+      padding-left: 0.8em; 
+      width: 75%;
+    }
+    h3 {
+      font-size: 1.7em;
+    }
+    .video_2 {
+      video {
+        width: 140%; 
+        margin-left: -16%;
+      }
+      .play {
+        a, a:hover {
+          font-size: 5em;
+        }
+      }
+    }
+  }
+  #contact {
+    margin-left: 12%; 
+    margin-right: 12%;
+    p {
+      font-size: 1.7em;
+    }
+    ul {
+      li {
+        h5 {
+          font-size: 1.7em;
+        }
+        p {
+          font-size: 1.6em;
+        }
+      }
+    }
+    .email, .skype, .office { 
+      height: 18em;
+    }
+    .skype {
+      padding-left: 6em;
+    }
+    .office {
+      padding-left: 6em;
+    }
+  }
+  .map, #map-canvas {
+    width: 140%; 
+    margin-left: -16%; 
+    height: 35em; 
+    padding-top: 3em;
   }
 }
