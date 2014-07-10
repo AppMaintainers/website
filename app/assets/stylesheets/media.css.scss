@@ -16,7 +16,8 @@
 @media (max-width: 767px) { 
   header {
     .coins {
-      width: 12em;
+      margin-top: 3em;
+      width: 40%;
     }
     .title {
       h1 {
@@ -31,7 +32,7 @@
   #projects {
     .project {
       h3 {
-        padding-bottom: 0.8em;
+        padding-bottom: 2em;
       }
     }
     .project:nth-child(6n+1) {  
@@ -54,18 +55,39 @@
       }
     }
   }
+  #contact {
+    .row {
+      h5, a, p {
+        font-size: 1.3em;
+      }
+    }
+  }
 }
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
+  .clearfix {
+    p:nth-of-type(1) { 
+      width: 70%;
+    }
+  }
   header {
     .header_bar {
       ul {
-        margin-right: 0.7em;
+        a {
+          font-size: 1.2em;
+        }
+      }
+    }
+    .magic{
+      img{
+        width: 100%;
       }
     }
     .coins {
-      padding: 5em;
+      margin-top: 5em;
+      padding: 1em;
     }
-    .title { 
+    .title {
+      padding: 5em;
       text-align: left;
       h1 {
         text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
@@ -77,14 +99,20 @@
       height: 6em;
     }
   }
+  h2 {
+    padding: 1em 0 0 0.5em;
+  }
+  p {
+    margin: 0 0 1.2em 1.2em;
+  }
   #projects {
-    p {
-      width: 75%;
-    }
     .project {
       width: 33.33%; 
       float: left; 
       height: 10em;
+      h3 {
+        font-size: 1.3em;
+      }
       h4 {
         font-size: 1em;
       }
@@ -99,19 +127,25 @@
     }
   }
   #contact {
-    .email, .skype, .office { 
-      height: 14em; 
+    .row {
+      h5, a, p {
+        font-size: 1.2em;
+      }
+      .email, .skype, .office { 
+        height: 8em; 
+      }
+      .email, .skype {
+        border-right: 1px solid rgba(73, 73, 73, 0.2);
+      }
+      .skype, .office {
+        padding-left: 4em;
+      }
     }
-    .email {
-      border-right: 1px solid rgba(73, 73, 73, 0.2);
-    }
-    .skype {
-      border-right: 1px solid rgba(73, 73, 73, 0.2);
-      padding-left: 2.4em;
-    }
-    .office {
-      padding-left: 2.4em;
-    }
+  }
+  .map, #map-canvas {
+    width: 140%; 
+    margin-left: -16%; 
+    height: 30em;
   }
 }
 
@@ -124,8 +158,12 @@
       }
       ul {
         margin-top: 0.5em;
-        a {
-          letter-spacing: 0.05em;
+        li {
+          padding-left: 4em;
+          a {
+            letter-spacing: 0.05em;
+            font-size: 1.5em;
+          }
         }
       }
     }
@@ -135,18 +173,25 @@
     }
     .title {
       h1 {
-        font-size: 4em;
+        font-size: 3em;
       }
       p {
-        font-size: 2em;
+        font-size: 1.6em;
       }
     }
     .statistic {
-      font-size: 1.6em; 
+      font-size: 1.4em; 
       height: 10em ; 
       background-size: 38%;
       span {
         font-size: 2.2em;
+      }
+    }
+  }
+  #projects {
+    .project {
+      h3 {
+        font-size: 1.4em;
       }
     }
   }
@@ -158,34 +203,64 @@
           width: 50%;
         }
       }
+      p {
+        margin: 0.3em 0 0 1em;
+      }
     }
     .employee {
       background-color: rgba(73, 73, 73, 0.2);
       p {
         float: left; 
-        padding-top: 24%; 
-        padding-left: 1em;
+        padding: 8.2em 2em 0 1em; 
+      }
+    }
+  }
+  #contact {
+    .row {
+      h5, a, p {
+        font-size: 1.4em;
+      }
+      .email, .skype, .office { 
+        height: 10em;
+      }
+      .skype, .office {
+        padding-left: 5em;
       }
     }
   }
 }
 
 @media (min-width: 1200px) {
+  h2 {
+    font-size: 4em;
+  }
+  p {
+    font-size: 1.7em; 
+  }
   header {
-    .coins {
-      margin: 3em 2em 3em 4em;
-    }
     .title {
-      margin-top: 8em;
+      padding: 7em;
+      h1 {
+        font-size: 4em;
+      }
+      p {
+        font-size: 2em;
+        margin: 0.5em 0 3em 0;
+      }
+      a {
+        font-size: 2em;
+      }
+    }
+    .coins {
+      margin-top: 7em;
+    }
+    .statistic {
+      font-size: 1.6em;
     }
   }
   #projects {
     margin-left: 12%; 
     margin-right: 12%;
-    p {
-      font-size: 1.7em; 
-      padding-left: 0.8em;
-    }
     a, a:hover {
       font-size: 4em;
     }
@@ -194,6 +269,9 @@
       max-height: 14em;
       h4 {
         font-size: 1.4em;
+      }
+      h3 {
+        font-size: 1.6em;
       }
     }
     .button {
@@ -221,11 +299,6 @@
   #team {
     margin-left: 12%; 
     margin-right: 12%;
-    p {
-      font-size: 1.7em; 
-      padding-left: 0.8em; 
-      width: 75%;
-    }
     .bosses, .employee {
       .profil {
         .Bence, .Attila {
@@ -243,9 +316,11 @@
         p {
           font-size: 2.2em; 
         }
+        h3 {
+          padding: 0 2em;
+        }
         h4 {
-          font-size: 1.7em; 
-          padding-left: 1em; 
+          font-size: 1.7em;  
         }
       }
     }
@@ -270,11 +345,6 @@
   #workstyle {
     margin-left: 12%; 
     margin-right: 12%;
-    p {
-      font-size: 1.7em; 
-      padding-left: 0.8em; 
-      width: 75%;
-    }
     h3 {
       font-size: 1.7em;
     }
@@ -293,33 +363,21 @@
   #contact {
     margin-left: 12%; 
     margin-right: 12%;
-    p {
-      font-size: 1.7em;
-    }
-    ul {
-      li {
-        h5 {
-          font-size: 1.7em;
-        }
-        p {
-          font-size: 1.6em;
-        }
+  }
+}
+
+@media (min-width: 1400px) {
+  #contact {
+    .row {
+      h5, a, p {
+        font-size: 1.6em;
+      }
+      .email, .skype, .office { 
+        height: 10em;
+      }
+      .skype, .office {
+        padding-left: 8em;
       }
     }
-    .email, .skype, .office { 
-      height: 18em;
-    }
-    .skype {
-      padding-left: 6em;
-    }
-    .office {
-      padding-left: 6em;
-    }
-  }
-  .map, #map-canvas {
-    width: 140%; 
-    margin-left: -16%; 
-    height: 35em; 
-    padding-top: 3em;
   }
 }

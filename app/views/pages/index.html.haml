@@ -1,4 +1,4 @@
-.menu{ data: { role: "panel" } }
+.menu
   = image_tag("bigapplogo.svg")
   .fixed
     %ul
@@ -10,11 +10,11 @@
       Call us:
       %br +36 20 534 1904
 
-.content{ data: { role: "panel" } }
+.content
   %header.text-center
     .vid
       #bg
-        = image_tag "1_index.jpg", class: "visible-xs", id: "bgimage"
+        = image_tag "2_index.jpg", class: "visible-xs", id: "bgimage"
         #overlay.hidden-xs
         %video#bg-video.hidden-xs{ autoplay: "", loop: "", muted: "", src: "assets/video.mp4" }
         .head
@@ -32,9 +32,10 @@
               %li= link_to "How we work", "#workstyle"
               %li= link_to "Contact us", "#contact"
           .line
-          .row
-            = image_tag "logo.svg", class: "coins col-sm-5"
-            .col-sm-7.col-lg-6.title
+          .row.magic
+            .col-sm-4.col-sm-offset-1
+              = image_tag "logo.svg", class: "coins"
+            .col-sm-7.title
               %h1
                 We maintain & build
                 %br.visible-lg Ruby on Rails apps.
@@ -44,16 +45,16 @@
       .col-xs-6
         We closed
         %br.visible-xs
-          %span#tickets_last_month 352
-          %br.visible-xs tickets last month
+        %span#tickets_last_month 352
+        %br.visible-xs tickets last month
       .col-xs-6
         We wrote approx.
         %br.visible-xs
-          %span#lines_this_week 1,400
-          %br.visible-xs lines of code this week
+        %span#lines_this_week 1,400
+        %br.visible-xs lines of code this week
       .mask
 
-  %section#projects
+  %section#projects.clearfix
     %h2 Projects
     %p We delivered a wide range of tasks from whole projects to business critical functions. Here is a short selection of our most interesting works.
     - @cards.each do |card|
@@ -77,12 +78,11 @@
             %td.back-button.sign
               = link_to "javascript:void(0);" do
                 %span <
-                %span.back.visible-lg back
+                %span.back.hidden-xs.hidden-sm back
             %td.title
               %h3= card.project
             %td.category
               %h4= card.category.split.map{|cat| "##{cat}"}.join(", ")
-        %table
           %tr
             %td.empty
             %td.solution
@@ -133,51 +133,42 @@
         %h3
           We know that every project is unique. We can either adapt our workflow to fit your environment (code repository, ticketing system, etc.) or we can get you familiar with our tried and tested industry standard tools.
           %br
-            %br
-              We operate our projects in two different modes: building and maintaining.
+          %br
+          We operate our projects in two different modes: building and maintaining.
       .col-sm-6
         %h3
           %span ~/.build
           %br
-            When we build a new project we define clear milestones. We also divide the larger milestones into smaller sprints which helps us and you effectively track the project.
-            %br
-            %br
-            %span ~/.maintain
-            %br
-            In maintenance mode we continuously monitor your project and act instantly if needed.
+          When we build a new project we define clear milestones. We also divide the larger milestones into smaller sprints which helps us and you effectively track the project.
+          %br
+          %br
+          %span ~/.maintain
+          %br
+          In maintenance mode we continuously monitor your project and act instantly if needed.
 
   %section#contact
     %h2 Contact us
     %p We are eager to hear about your project!
     .row
-      .col-sm-4
-        %ul.email
-          %li
-            %h5 email
-            %p
-              = mail_to "hello@appmaintainers.com"
-              %br
-              %br.hidden-xs/
-          %li
-            %h5 phone
-            %p +36 20 534 1904
-      .col-sm-4
-        %ul.skype
-          %li
-            %h5 skype
-            %p
-              = link_to "Bence Erdõs", "skype:bence_erdos"
-              ,
-              %br.hidden-xs
-                = link_to "Attila Juhász", "skype:goraffe"
-          %li
-            %h5 linkedin
-            %p= link_to "appmaintainers", "https://www.linkedin.com/company/app-maintainers-limited", target: "_blank"
-      .col-sm-4
-        %ul.office
-          %li
-            %h5 office
-            %p= link_to raw("H-1115 Budapest <br> Bártfai utca 54."), "https://www.google.hu/maps/place/B%C3%A1rtfai+utca+54/@47.464979,19.0290019,17z/data=!3m1!4b1!4m2!3m1!1s0x4741ddbf76f1c81f:0xba4de98c0266d5c8", target: "_blank"
-      
+      .col-sm-4.email
+        %h5 email
+        = mail_to "hello@appmaintainers.com"
+      .col-sm-4.skype
+        %h5 skype
+        = link_to "Bence Erdõs,", "skype:bence_erdos"
+        <br>
+        = link_to "Attila Juhász", "skype:goraffe"
+      .col-sm-4.office
+        %h5 office
+        = link_to "H-1115 Budapest,", "https://www.google.hu/maps/place/B%C3%A1rtfai+utca+54/@47.464979,19.0290019,17z/data=!3m1!4b1!4m2!3m1!1s0x4741ddbf76f1c81f:0xba4de98c0266d5c8", target: "_blank"
+        <br>
+        = link_to "Bártfai utca 54.", "https://www.google.hu/maps/place/B%C3%A1rtfai+utca+54/@47.464979,19.0290019,17z/data=!3m1!4b1!4m2!3m1!1s0x4741ddbf76f1c81f:0xba4de98c0266d5c8", target: "_blank"
+    .row
+      .col-sm-4.email
+        %h5 phone
+        %p +36 20 534 1904
+      .col-sm-4.skype
+        %h5 linkedin
+        = link_to "appmaintainers", "https://www.linkedin.com/company/app-maintainers-limited", target: "_blank"
   %section.map
     #map-canvas
