@@ -3,10 +3,7 @@
     .bosses, .employee {
       .profil {
         .Bence, .Attila {
-          min-height: 20em;
-        }
-        .Botond, .Soma {
-          min-height: 12em;
+          min-height: 34em;
         }
       }
     }
@@ -28,6 +25,9 @@
   }
   #projects, #team, #workstyle, #contact {
     text-align: center;
+    p:nth-of-type(1) {
+      padding: 0 1em;
+    }
   }
   #projects {
     .project {
@@ -196,22 +196,29 @@
     }
   }
   #team {
-    .bosses, .employee {
-      .profil {
-        .Botond, .Soma {
-          float: left; 
-          width: 50%;
-        }
-      }
+    .bosses {
       p {
         margin: 0.3em 0 0 1em;
       }
     }
     .employee {
-      background-color: rgba(73, 73, 73, 0.2);
+      background-color: white;
+      .profil {
+        .Botond, .Soma {
+          min-height: 17em;
+          float: left; 
+          width: 100%;
+        }
+      }
       p {
-        float: left; 
-        padding: 8.2em 2em 0 1em; 
+        float: right; 
+        width: initial;
+        margin: 0;
+      }
+      .som {
+        p {
+          float: left;
+        }
       }
     }
   }
@@ -304,14 +311,8 @@
         .Bence, .Attila {
           width: 132%;
         }
-        .Bence, .Botond {
+        .Bence {
           margin-left: -32%;
-        }
-        .Botond, .Soma {
-          width: 66%;
-        }
-        .Soma {
-          margin-right: -32%;
         }
         p {
           font-size: 2.2em; 
@@ -325,20 +326,10 @@
       }
     }
     .employee {
-      background-color: white;
+      width: 132%;
+      margin-left: -16%;
       p {
-        float: none; 
-        width: initial;
-      }
-      .profil:last-child {
-        p {
-          float: right;
-        }
-      }
-      .profil {
-        .Botond {
-          float: right;
-        }
+        font-size: 1.6em; 
       }
     }
   }

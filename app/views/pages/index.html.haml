@@ -40,7 +40,7 @@
                 We maintain & build
                 %br.visible-lg Ruby on Rails apps.
               %p.hidden-xs From a quick hotfix to large-scale web apps we are here to help you with your project.
-              %a{ href: "javascript:void(0);" } ► How do we do it?
+              / %a{ href: "javascript:void(0);" } ► How do we do it?
     .row.statistic
       .col-xs-6
         We closed
@@ -69,8 +69,8 @@
           .col-xs-offset-2.col-xs-5.circles
             - (1..5).each do |circle|
               %div{class: card.difficulty >= circle ? "circle_full" : "circle_empty"}
-    .button
-      %a{ href: "javascript:void(0);" } more projects
+    / .button
+    /   %a{ href: "javascript:void(0);" } more projects
     - @cards.each do |card|
       .one-project.hidden-xs{ id: "one-#{card.id}" }
         %table
@@ -100,21 +100,23 @@
     %p We believe that good communication is just as important as coding. Which means that you will be in direct contact with our lead developers.
     .row.bosses
       .col-xs-6.profil
-        .Bence{ style: "background: url(#{image_path('Bence_2.jpg')}); background-position: center center" }
+        .Bence{ style: "background: url(#{image_path('Bence2_.jpg')}); background-position: center center" }
         %p Bence Erdõs
         %h3 ceo
         %h4.desc Having a solid experience in company management and leadership I am capable of understanding IT problems of business focused clients. Finding the right solutions and helping clients to use their software infrastructure effectively is what continuously drives me.
       .col-xs-6.profil
-        .Attila{ style: "background: url(#{image_path('Attila.jpg')}); background-position: center center;" }
+        .Attila{ style: "background: url(#{image_path('Attila_.jpg')}); background-position: center center;" }
         %p Attila Juhász
         %h3 cto
         %h4.desc I have been working on web related projects for ten years. I've seen many setups, many apps and I solved countless bugs in enterprise level Rails apps. I love working with new technologies, always searching for the perfect technology, tool, solution.
     .row.employee.hidden-xs.hidden-sm
-      .col-xs-6.profil
-        .Botond{ style: "background: url(#{image_path('Boti.jpg')}); background-position: center center" }
+      .col-md-3.bot
         %p Botond Erdõs
-      .col-xs-6.profil
-        .Soma{ style: "background: url(#{image_path('Soma.jpg')}); background-position: center center" }
+      .col-md-3.profil
+        .Botond{ style: "background: url(#{image_path('Boti_.jpg')}); background-position: center center" }
+      .col-md-3.profil
+        .Soma{ style: "background: url(#{image_path('Soma_.jpg')}); background-position: center center" }
+      .col-md-3.som
         %p Soma Stágel
 
   %section#workstyle
@@ -126,8 +128,8 @@
         %source{ src: "assets/mov_bbb.mp4", type: "video/mp4" }
           %source{ src: "assets/mov_bbb.ogg", type: "video/ogg" }
             Your browser does not support the video tag.
-      .play
-        %a{ href: "javascript:void(0);" } ► Play
+      / .play
+      /   %a{ href: "javascript:void(0);" } ► Play
     .row
       .col-sm-6
         %h3
