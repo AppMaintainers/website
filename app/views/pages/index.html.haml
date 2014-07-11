@@ -16,7 +16,7 @@
       #bg
         = image_tag "2_index.jpg", class: "visible-xs", id: "bgimage"
         #overlay.hidden-xs
-        %video#bg-video.hidden-xs{ autoplay: "", loop: "", muted: "", src: "image_path/video.mp4" }
+        %video#bg-video.hidden-xs{ autoplay: "", loop: "", muted: "", src: image_path('video.mp4') }
         .head
           .header_bar
             .AM
@@ -125,8 +125,8 @@
     = image_tag "video.jpg", class: "visible-xs"
     .row.video_2.hidden-xs
       %video{ controls: "" }
-        %source{ src: "image_path/mov_bbb.mp4", type: "video/mp4" }
-          %source{ src: "image_path/mov_bbb.ogg", type: "video/ogg" }
+        %source{ src: image_path('mov_bbb.mp4'), type: "video/mp4" }
+          %source{ src: image_path('mov_bbb.ogg'), type: "video/ogg" }
             Your browser does not support the video tag.
       / .play
       /   %a{ href: "javascript:void(0);" } ► Play
