@@ -5,6 +5,7 @@ initialize = ->
     center: myLatlng
     disableDefaultUI: true
     draggable: ($(document).width() > 480)
+    scrollwheel: false
 
   map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions)
   marker = new google.maps.Marker(
@@ -12,7 +13,14 @@ initialize = ->
     map: map
     title: "AppMaintainers"
   )
+  google.maps.event.addListener map, 'click', ->
+    @.setOptions
+      scrollwheel: true
+  google.maps.event.addListener map, 'mouseout', ->
+    @.setOptions
+      scrollwheel: false
   return
+
 google.maps.event.addDomListener window, "load", initialize
 
 # date spinners
@@ -36,18 +44,12 @@ $ ->
     refreshInterval: 50
 
   # navigation
-  $(".toggle-nav").click (e) ->
+  $(".toggle-nav").click ->
     toggleNav()
-    e.preventDefault()
-    return
 
   # esc from menu
-  $(document).keyup (e) ->  
-    toggleNav()  if $("#wrapper").hasClass("show-nav")  if e.keyCode is 27
-    return
-  $(document).mouseup () ->
-    toggleNav() if $("#wrapper").hasClass("show-nav")  
-    return
+  $(document).keyup (e) ->
+    toggleNav() if $("#wrapper").hasClass("show-nav") and e.keyCode is 27
 
   ###
   $(document).on "pageinit", "#landing", ->
@@ -59,10 +61,7 @@ $ ->
       return
     return
   ###
-
-  #$(".toggle-nav").click ->
-  #  $('.wrapper').toggleClass('show-nav')
-
+ 
   # project
   $(".project").click ->
     if window.innerWidth > 767
@@ -99,21 +98,18 @@ $ ->
     #prof.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', prof.addClass("desc"))
     return
 
-  $(".menu li a").on "click", (e) ->
+  $(".menu li a").on "click", (e)->
     e.preventDefault()
-    setTimeout "$.scrollTo( $(\"" + $(this).attr("href") + "\"), 500 )", 500
-    return
+    href = $(@).attr('href')
+    toggleNav()
+    setTimeout ( ->
+      $.scrollTo(href, 'slow')
+    ), 600
 
-  $(".header_bar li a").on "click", (e) ->
-    e.preventDefault()
-    setTimeout "$.scrollTo( $(\"" + $(this).attr("href") + "\"), 500 )"
-    return
+  $(".header_bar li a").on "click", ->
+    $.scrollTo($(@).attr("href"), 'slow')
 
   return
 
 toggleNav = ->
-  if $(".wrapper").hasClass("show-nav")
-    $(".wrapper").removeClass "show-nav"
-  else
-    $(".wrapper").addClass "show-nav"
-  return
+  $('.wrapper').toggleClass('show-nav')
