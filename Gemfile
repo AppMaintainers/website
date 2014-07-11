@@ -46,6 +46,7 @@ end
 
 group :development do
 	gem 'sqlite3'
+	gem 'thin'
 end
 
 gem 'rails_12factor', group: :production
