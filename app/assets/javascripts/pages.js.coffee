@@ -40,7 +40,7 @@ $ ->
   $("#lines_this_week").countTo
     from: Math.floor(lines / 2)
     to: Math.floor(lines)
-    speed: 2000
+    speed: 20000
     refreshInterval: 50
 
   # navigation
