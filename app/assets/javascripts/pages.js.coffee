@@ -33,7 +33,7 @@ $ ->
   $("#tickets_last_month").countTo
     from: Math.floor(month_data[date.getMonth()] / 2)
     to: month_data[date.getMonth()]
-    speed: 1000
+    speed: 10000
     refreshInterval: 50
 
   lines = month_data[date.getMonth()] * 22 / 7 * date.getDay()
