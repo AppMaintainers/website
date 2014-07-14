@@ -56,7 +56,7 @@
 
   %section#projects.clearfix
     %h2 Projects
-    %p We delivered a wide range of tasks from whole projects to business critical functions. Here is a short selection of our most interesting works.
+    %p We delivered a wide range of tasks from startup projects to business critical functions. Here is a short selection of our most interesting works.
     - @cards.each do |card|
       .project{ id: "card-#{card.id}", style: "z-index: #{card.id}" }
         %h4= card.category.split.map{|cat| "##{cat}"}.join(", ")
@@ -154,7 +154,7 @@
     .row
       .col-sm-4.email
         %h5 email
-        = mail_to "hello@appmaintainers.com"
+        = mail_to "hello@AppMaintainers.com"
       .col-sm-4.skype
         %h5 skype
         = link_to "Bence Erdõs,", "skype:bence_erdos"
@@ -171,6 +171,6 @@
         %p +36 20 534 1904
       .col-sm-4.skype
         %h5 linkedin
-        = link_to "appmaintainers", "https://www.linkedin.com/company/app-maintainers-limited", target: "_blank"
+        = link_to "AppMaintainers", "https://www.linkedin.com/company/app-maintainers-limited", target: "_blank"
   %section.map
     #map-canvas

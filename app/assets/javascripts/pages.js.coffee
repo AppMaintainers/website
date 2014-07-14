@@ -13,6 +13,8 @@ initialize = ->
     map: map
     title: "AppMaintainers"
   )
+  latLng = marker.getPosition()
+  map.setCenter(latLng)
   google.maps.event.addListener map, 'click', ->
     @.setOptions
       scrollwheel: true

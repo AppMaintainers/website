@@ -1,7 +1,10 @@
 !!!
 %html
   %head
-    %title WebsiteApp
+    %meta{content: "We are Ruby on Rails developers, we maintain Rails apps.", name: "description"}
+    %meta{content: "Ruby on Rails, Rails, Ruby, RoR, develop, maintain, gem, Heroku, GitHub, API, bugfix, upgrade, code, refactor, SQL", name: "keywords"}
+
+    %title We maintain & build Ruby on Rails apps.
     %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %meta{content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", name: "viewport"}/
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
@@ -17,3 +20,15 @@
     #wrapper.wrapper
       #landing.canvas
         = yield
+        
+    - if request.domain == "www.appmaintainers.com"
+      :javascript
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-30748602-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
