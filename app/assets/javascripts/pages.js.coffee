@@ -35,14 +35,14 @@ $ ->
   $("#tickets_last_month").countTo
     from: Math.floor(month_data[date.getMonth()] / 2)
     to: month_data[date.getMonth()]
-    speed: 1000
+    speed: 10000
     refreshInterval: 50
 
   lines = month_data[date.getMonth()] * 22 / 7 * date.getDay()
   $("#lines_this_week").countTo
     from: Math.floor(lines / 2)
     to: Math.floor(lines)
-    speed: 2000
+    speed: 20000
     refreshInterval: 50
 
   # navigation
