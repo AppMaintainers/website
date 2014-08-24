@@ -16,7 +16,10 @@
       #bg
         = image_tag "2_index.jpg", class: "visible-xs", id: "bgimage"
         #overlay.hidden-xs
-        %video#bg-video.hidden-xs{ autoplay: "", loop: "", muted: "", src: image_path('video.mp4') }
+        %video#bg-video.hidden-xs{ autoplay: "", loop: "", muted: "", poster: image_path('video_poster.png') }
+          %source{ src: image_path('video.mp4')}
+          // Put fallbacks here. e.g.:
+          // %source{ src: image_path('video.ogg')}
         .head
           .header_bar
             .AM
