@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def index
-    @cards = Card.limit(6).all
+    @cards = Card.all.shuffle[0..5]
   end
 end

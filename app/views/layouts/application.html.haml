@@ -1,26 +1,48 @@
 !!!
 %html
   %head
-    %meta{content: "We are Ruby on Rails developers, we maintain Rails apps.", name: "description"}
-    %meta{content: "Ruby on Rails, Rails, Ruby, RoR, develop, maintain, gem, Heroku, GitHub, API, bugfix, upgrade, code, refactor, SQL", name: "keywords"}
+    %meta{content: "We are Ruby on Rails developers, we maintain and build Rails apps.", name: "description"}
+    %meta{content: "Ruby on Rails, Rails, Ruby, RoR, develop, maintain, gem, Heroku, GitHub, API, bugfix, upgrade, code, refactor, SQL, Meteor.js, Meteor, Javascript", name: "keywords"}
 
     %title We maintain & build Ruby on Rails apps.
+
     %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %meta{content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", name: "viewport"}/
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
+
     = csrf_meta_tags
+
     / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
     / WARNING: Respond.js doesn't work if you view the page via file://
     /[if lt IE 9]
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    / favicons
+    %link{:href => "/apple-touch-icon-57x57.png", :rel => "apple-touch-icon", :sizes => "57x57"}/
+    %link{:href => "/apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}/
+    %link{:href => "/apple-touch-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}/
+    %link{:href => "/apple-touch-icon-144x144.png", :rel => "apple-touch-icon", :sizes => "144x144"}/
+    %link{:href => "/apple-touch-icon-60x60.png", :rel => "apple-touch-icon", :sizes => "60x60"}/
+    %link{:href => "/apple-touch-icon-120x120.png", :rel => "apple-touch-icon", :sizes => "120x120"}/
+    %link{:href => "/apple-touch-icon-76x76.png", :rel => "apple-touch-icon", :sizes => "76x76"}/
+    %link{:href => "/apple-touch-icon-152x152.png", :rel => "apple-touch-icon", :sizes => "152x152"}/
+    %link{:href => "/apple-touch-icon-180x180.png", :rel => "apple-touch-icon", :sizes => "180x180"}/
+    %link{:href => "/favicon-192x192.png", :rel => "icon", :sizes => "192x192", :type => "image/png"}/
+    %link{:href => "/favicon-160x160.png", :rel => "icon", :sizes => "160x160", :type => "image/png"}/
+    %link{:href => "/favicon-96x96.png", :rel => "icon", :sizes => "96x96", :type => "image/png"}/
+    %link{:href => "/favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
+    %link{:href => "/favicon-32x32.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}/
+    %meta{:content => "#ffffff", :name => "msapplication-TileColor"}/
+    %meta{:content => "/mstile-144x144.png", :name => "msapplication-TileImage"}/
+
   %body
     #wrapper.wrapper
       #landing.canvas
         = yield
-        
+
     - if request.domain == "www.appmaintainers.com"
       :javascript
         var _gaq = _gaq || [];
